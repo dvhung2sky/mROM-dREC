@@ -30,8 +30,29 @@ application makes no network requests.
 | `webapp/mf_app.py` | the viewer, one file on the Python standard-library HTTP server |
 | `webapp/index.html` | the interface |
 | `release_webapp/0*/arm2`, `arm3` | training scripts for both learned arms, and the per-seed result tables and logs of the published runs |
-| `release_webapp/0*/numerical_model` | the finite element generators that produce each database |
+| `release_webapp/0*/numerical_model` | the finite element models that generate the high-fidelity data |
 | `release_webapp/0*/database` | processed results: the response histories for the held-out test samples |
+
+## Numerical models
+
+Each system ships the finite element model that produces its high-fidelity data, so the
+databases behind the published results can be regenerated from source.
+
+| system | model | solver |
+|---|---|---|
+| `01_sdof/numerical_model` | bilinear oscillator, Newmark integration | NumPy |
+| `02_frame_v3/numerical_model` | two-bay three-storey frame, concentrated plastic hinges at the member ends | NumPy |
+| `03_tunnel/numerical_model` | 200 m Euler–Bernoulli tube on an elastoplastic Winkler bed under a moving train | **OpenSees** (`openseespy`) |
+| `04_turbine/numerical_model` | tapered tower and embedded monopile, rigid rotor–nacelle assembly, elastoplastic API-sand p–y springs, mudline plastic hinge, thrust from the wind speed relative to the moving hub | NumPy / SciPy |
+
+`openseespy` is required for the tunnel generator only; nothing else in the repository
+needs it, and the viewer needs neither.
+
+The turbine pipeline runs in three steps, wrapped by `04_turbine/numerical_model/RUN.sh`:
+`gen_wind_turbine_database.py` evaluates the model in parallel shards,
+`consolidate_wt.py` merges them into the layout the learning scripts expect, and
+`cap_vhub.py` keeps the V_hub ≤ 20.2 m/s operating envelope, which is the 1248 of 1597
+samples the published turbine results use.
 
 ## Scope of the distributed results
 
