@@ -1,0 +1,9 @@
+# External packages the archived scripts import.  Not artefacts, so not bundled.
+numpy
+scipy
+torch
+matplotlib
+# Tunnel database generation ONLY (03_tunnel_unweighted/numerical_model).  The training
+# scripts and every other example do not need it -- you only need openseespy to REGENERATE
+# tunnel_moving_train_database.npz, which is already in the bundle.
+openseespy

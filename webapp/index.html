@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Multi-fidelity surrogate demonstrator — Viet-Hung Dang, HUCE</title>
+<script src="/plotly.js"></script>
+<style>
+  :root{
+    --ink:#1f2a37; --steel:#5b6b7c; --mute:#78868f; --line:#c9d2da; --hair:#e4e9ee;
+    --bg:#ffffff; --card:#ffffff; --accent:#0d7d8a; --accentbg:#e6f2f3;
+    --amber:#a85c11; --amberbg:#f8f0e4; --ok:#1b6b45; --okbg:#e6f2ec;
+    --ref:#1f2a37; --lin:#9aa7b4; --dd:#0d7d8a; --mf:#a85c11;
+    --serif:"Times New Roman",Times,serif;
+    --sans:"Times New Roman",Times,serif;
+    --mono:"SF Mono",Menlo,Consolas,monospace;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--bg);color:var(--ink);font:33px/1.4 var(--sans);
+     -webkit-font-smoothing:antialiased}
+
+  /* ── masthead ─────────────────────────────────────────────── */
+  .masthead{background:var(--card);border-bottom:1px solid var(--line)}
+  .mast-in{max-width:2250px;margin:0 auto;padding:13px 24px;display:flex;
+           gap:18px;align-items:center;flex-wrap:wrap}
+  .logo{width:117px;height:117px;flex:0 0 auto;border-radius:8px;display:grid;
+        place-items:center;background:var(--accentbg);border:1px solid #cfe3e5;
+        font:700 34px/1 var(--sans);color:var(--accent);letter-spacing:.04em}
+  .logo img{width:100%;height:100%;object-fit:contain;border-radius:8px}
+  .mast-txt{flex:1 1 460px;min-width:280px}
+  h1{margin:0;font:700 46px/1.18 var(--serif);letter-spacing:.005em}
+  .byline{margin:6px 0 0;font-size:30px;color:var(--steel)}
+  .byline strong{color:var(--ink);font-weight:600}
+  .mast-meta{font-size:25px;color:var(--mute);text-align:right;flex:0 0 auto;line-height:1.7}
+  #rot{display:block;margin:8px 0 0 auto;padding:6px 14px;cursor:pointer;
+       font:600 22px/1 var(--sans);color:var(--steel);background:var(--card);
+       border:1px solid var(--line);border-radius:4px}
+  #rot:hover{color:var(--accent);border-color:var(--accent)}
+  /* In-page scale. The page is deliberately oversized so screenshots stay legible in the
+     manuscript, which means browser zoom-out can bottom out before it fits; this goes
+     further and, unlike transform:scale, it reflows. */
+  .ctlbar{display:flex;gap:0;justify-content:flex-end;align-items:stretch;margin-top:8px}
+  .ctlbar button{cursor:pointer;font:600 22px/1 var(--sans);color:var(--steel);
+       background:var(--card);border:1px solid var(--line);padding:6px 14px;margin-left:-1px}
+  .ctlbar button:first-child{border-radius:4px 0 0 4px}
+  .ctlbar button:last-child{border-radius:0 4px 4px 0;font-size:19px}
+  .ctlbar button:hover{color:var(--accent);border-color:var(--accent);position:relative}
+  #zoomval{display:grid;place-items:center;min-width:74px;padding:0 6px;
+       font:600 21px/1 var(--sans);color:var(--ink);background:var(--card);
+       border:1px solid var(--line);border-left:0;border-right:0}
+  /* Rotation: #page becomes a fixed viewport-sized pane with its own scrollbar, so
+     the long response column scrolls along whichever axis is now vertical. */
+  body.rotated{overflow:hidden}
+  body.rotated #page{position:fixed;top:0;left:0;overflow:auto;transform-origin:0 0}
+
+  main{max-width:2250px;margin:0 auto;padding:16px 24px 28px}
+  section{margin-bottom:14px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:4px}
+  .card-h{padding:10px 16px;border-bottom:1px solid var(--hair);display:flex;
+          align-items:baseline;gap:12px;flex-wrap:wrap}
+  .card-h h2{margin:0;font:600 15px/1.3 var(--serif);letter-spacing:.01em}
+  .card-h .sub{font-size:27px;color:var(--mute)}
+  .card-b{padding:13px 16px}
+
+  /* ── controls ─────────────────────────────────────────────── */
+  .ctrl{display:flex;gap:16px;align-items:flex-end;flex-wrap:wrap}
+  label{display:block;font:700 23px/1 var(--sans);color:var(--steel);
+        text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px}
+  select,input[type=number]{font:30px var(--sans);padding:8px 10px;color:var(--ink);
+        border:1px solid var(--line);border-radius:7px;background:#fff}
+  select:focus,input:focus{outline:2px solid var(--accentbg);border-color:var(--accent)}
+  #case{min-width:480px}
+  #seed{min-width:130px}
+  #sid{width:150px}
+  button{font:700 29px var(--sans);padding:9px 18px;border:0;border-radius:7px;
+         background:var(--ink);color:#fff;cursor:pointer}
+  button.ghost{background:#eef1f4;color:var(--ink)}
+  button:disabled{opacity:.45;cursor:default}
+  #status{margin-left:auto;font-size:27px;color:var(--steel);min-height:20px}
+
+  .badge{display:inline-block;font:700 23px var(--sans);letter-spacing:.04em;
+         padding:3px 9px;border-radius:20px;text-transform:uppercase}
+  .b-live{background:var(--okbg);color:var(--ok)}
+  .b-part{background:var(--amberbg);color:var(--amber)}
+  .b-test{background:var(--okbg);color:var(--ok)}
+  .b-tr{background:#eef1f4;color:var(--steel)}
+  .notice{margin-top:12px;padding:10px 13px;border-radius:7px;font-size:13px;
+          background:var(--amberbg);color:#7a430c;border:1px solid #ecd9bd}
+  .notice b{color:#5f340a}
+
+  /* ── legend ───────────────────────────────────────────────── */
+  .legend{display:flex;gap:22px;flex-wrap:wrap;margin-top:14px;font-size:28px;color:var(--steel)}
+  .legend i{display:inline-block;width:22px;height:0;border-top-width:3px;
+            border-top-style:solid;margin-right:7px;vertical-align:middle}
+
+  /* ── tables ───────────────────────────────────────────────── */
+  table{border-collapse:collapse;width:100%;font-size:29px}
+  th,td{padding:6.5px 11px;text-align:right;border-bottom:1px solid var(--hair)}
+  th:first-child,td:first-child{text-align:left}
+  thead th{font:700 23px var(--sans);text-transform:uppercase;letter-spacing:.05em;
+           color:var(--steel);border-bottom:1.5px solid var(--line);white-space:nowrap}
+  tbody tr:last-child td{border-bottom:0}
+  tbody tr.tot td{border-top:1.5px solid var(--line);font-weight:600}
+  .num{font-family:var(--mono);font-size:27px;font-variant-numeric:tabular-nums}
+  .win{color:var(--ok);font-weight:700}
+  .sw{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:7px}
+  .rowsub{display:block;font-size:25px;color:var(--mute);font-weight:400}
+  .best{background:var(--accentbg);border-radius:3px}
+  .card-h h2{font-size:36px}
+
+  .err{margin:0;padding:12px 14px;border-radius:8px;font-size:13.5px;
+       background:#fdecea;color:#8c1d18;border:1px solid #f3c7c2}
+  footer{max-width:2250px;margin:0 auto;padding:0 24px 18px;font-size:25px;color:var(--mute)}
+  footer code{font-family:var(--mono);font-size:11.5px;color:var(--steel)}
+  .tight .card-b{padding-top:6px;padding-bottom:2px}
+  .bleed{width:100vw;margin-left:calc(50% - 50vw);border-radius:0;border-left:0;border-right:0}
+  .bleed .card-h,.bleed .card-b{padding-left:26px;padding-right:26px}
+  @media (max-width:760px){ .mast-meta{text-align:left} #case{min-width:100%} }
+</style>
+</head>
+<body>
+<div id="page">
+
+<div class="masthead">
+  <div class="mast-in">
+    <div class="logo" id="logo">HUCE</div>
+    <div class="mast-txt">
+      <h1>Multi-fidelity surrogate modelling of non-linear structural response</h1>
+      <p class="byline">Interactive demonstrator &middot; <strong>Viet-Hung Dang</strong>
+         &middot; Hanoi University of Civil Engineering (HUCE)</p>
+    </div>
+    <div class="mast-meta">
+      Three-arm benchmark &middot; four case studies<br>
+      held-out test split
+      <span class="ctlbar">
+        <button id="zoomout" type="button" title="Smaller (the page is sized for screenshots, so
+                it starts larger than a normal web page)" aria-label="Zoom out">&minus;</button>
+        <span id="zoomval">100%</span>
+        <button id="zoomin" type="button" title="Larger" aria-label="Zoom in">+</button>
+        <button id="zoomreset" type="button" title="Back to 100%">Reset</button>
+      </span>
+      <button id="rot" type="button" title="Rotate the page 90&deg; (for landscape screenshots)"
+              aria-label="Rotate the page">&#10227; Rotate <span id="rotdeg">0&deg;</span></button>
+    </div>
+  </div>
+</div>
+
+<main>
+
+  <!-- explorer -->
+  <section class="card">
+    <div class="card-h">
+      <h2>Response explorer</h2>
+      <span class="sub">select a case study, a training seed and a sample; predictions run on demand</span>
+    </div>
+    <div class="card-b">
+      <div class="ctrl">
+        <div><label for="case">Case study</label><select id="case"></select></div>
+        <div><label for="seed">Seed</label><select id="seed"></select></div>
+        <div><label for="sid">Sample ID</label><input type="number" id="sid" value="0" min="0" step="1"></div>
+        <div><label for="split">Search within</label>
+          <select id="split"><option value="">any split</option>
+            <option value="training">training</option>
+            <option value="validation">validation</option>
+            <option value="test">test</option></select></div>
+        <div><button id="run">Compute response</button></div>
+        <div><button id="rand" class="ghost">Find a non-linear sample</button></div>
+        <div id="status"></div>
+      </div>
+      <div id="caseNote"></div>
+      <div class="legend" id="legend"></div>
+    </div>
+  </section>
+
+  <div id="error"></div>
+
+  <section class="card tight" id="plotCard" style="display:none">
+    <div class="card-h"><h2>Response histories</h2>
+      <span class="sub" id="plotSub"></span></div>
+    <div class="card-b"><div id="plot" style="width:100%"></div></div>
+  </section>
+
+  <section class="card" id="metricsCard" style="display:none">
+    <div class="card-h"><h2>Accuracy for this sample</h2>
+      <span class="sub" id="metricsSub"></span></div>
+    <div class="card-b" style="overflow-x:auto"><table id="metrics"></table></div>
+  </section>
+
+  <!-- benchmark summary -->
+  <section class="card">
+    <div class="card-h">
+      <h2>Benchmark summary</h2>
+      <span class="sub">coefficient of determination on the held-out test split,
+      mean &plusmn; s.d. over five training seeds</span>
+    </div>
+    <div class="card-b" style="overflow-x:auto">
+      <table id="summary"></table>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>Arm&nbsp;1 — low-fidelity numerical model, no learning. Arm&nbsp;2 — data-driven
+     surrogate mapping load to response. Arm&nbsp;3 — multi-fidelity corrector: Arm&nbsp;1
+     plus a learned residual. Reference — full non-linear finite-element solution.</p>
+  <p>Artefacts served from <code>release_3arm_table/</code>; databases, checkpoints, scripts and
+     per-seed logs are archived there with an MD5 manifest. SDOF and the tunnel run live from
+     the five archived seeds; the tunnel row is the N&nbsp;=&nbsp;500 five-seed set the published
+     table quotes, on the unweighted per-sensor metric. The turbine row is trained on a
+     <b>restricted operating envelope</b> — the 1248 samples with hub wind speed
+     ≤&nbsp;20.2&nbsp;m/s — and its artefacts ship with the app in
+     <code>release_webapp/04_turbine/</code> rather than in the release bundle, which holds
+     the published runs. Above rated wind the pitch controller sheds thrust and aerodynamic
+     damping rises, so the fore-aft fluctuation shrinks against the mean deflection; excluding
+     that regime raises the Arm&nbsp;3 per-sample median from 0.68 to 0.82. It also helps
+     Arms&nbsp;1 and 2 more than Arm&nbsp;3, so the multi-fidelity margin narrows — the
+     full-range five-seed and 200%-data turbine runs remain in <code>RESULTS.csv</code> and
+     <code>data200/</code>. The frame row archives per-seed JSON metrics only, so
+     it replays the all-sample predictions exported from its published seed-42 run and carries
+     no seed spread here.</p>
+</footer>
+
+</div><!-- /#page -->
+
+<script>
+const $ = s => document.querySelector(s);
+const COL = {reference:'#1f2a37', linear:'#9aa7b4', datadriven:'#0d7d8a', multifidelity:'#a85c11'};
+const DASH= {reference:'solid', linear:'dot', datadriven:'solid', multifidelity:'solid'};
+const NAME= {reference:'Reference (non-linear FE)', linear:'Arm 1 (low-fidelity)',
+             datadriven:'Arm 2 (data-driven)',      multifidelity:'Arm 3 (multi-fidelity)'};
+const SHORT={linear:'Arm 1', datadriven:'Arm 2', multifidelity:'Arm 3'};
+let CASES=[], busy=false, SPLIT={};
+
+// swap in the official mark if webapp/assets/huce_logo.png exists
+(function(){ const i=new Image();
+  i.onload=()=>{ $('#logo').innerHTML=''; $('#logo').appendChild(i); };
+  i.src='/assets/huce_logo.png'; i.alt='HUCE'; })();
+
+const f4 = x => Number.isFinite(x) ? (x>=0?'+':'') + x.toFixed(4) : '—';
+const f2 = x => Number.isFinite(x) ? x.toFixed(1) : '—';
+
+async function loadSummary(){
+  const rows = await (await fetch('/api/results')).json();
+  let h = `<thead><tr><th>System</th><th>Arm 1<br><span style="font-weight:400">low-fidelity</span></th>
+           <th>Arm 2<br><span style="font-weight:400">data-driven</span></th>
+           <th>Arm 3<br><span style="font-weight:400">multi-fidelity</span></th>
+           </tr></thead><tbody>`;
+  for (const r of rows){
+    h += `<tr><td>${r.label}<span class="rowsub">${r.sub}${
+            r.metric ? ` &middot; R² is the ${r.metric}` : ''}</span></td>`;
+    for (const a of ['arm1','arm2','arm3'])
+      h += `<td class="num ${a==='arm3'?'best':''}">${f4(r[a].mean)}` +
+           (r.seeds > 1 ? `<span style="color:var(--mute)"> ± ${r[a].sd.toFixed(4)}</span>` : '') + `</td>`;
+    h += `</tr>`;
+  }
+  $('#summary').innerHTML = h + '</tbody>';
+}
+
+async function loadCases(){
+  CASES = await (await fetch('/api/cases')).json();
+  $('#case').innerHTML = CASES.map(c=>`<option value="${c.id}">${c.label}</option>`).join('');
+  onCase();
+}
+
+function currentCase(){ return CASES.find(c=>c.id===$('#case').value); }
+
+let SPLIT_TOKEN = 0;
+async function loadSplit(){
+  SPLIT = {};
+  const tok = ++SPLIT_TOKEN;
+  const c = currentCase(); if (!c || !c.live) return;
+  const key = `${c.id}|${$('#seed').value||42}`;
+  try{
+    const r = await (await fetch(
+      `/api/split?case=${c.id}&seed=${$('#seed').value||42}`)).json();
+    // discard a reply that arrived after the user moved on
+    if (tok !== SPLIT_TOKEN || key !== `${currentCase().id}|${$('#seed').value||42}`) return;
+    SPLIT = r;
+  }catch(e){}
+  const has = Object.keys(SPLIT).length > 0;
+  $('#split').disabled = !has;
+  if (!has) $('#split').value = '';
+}
+
+function onCase(){
+  const c = currentCase(); if (!c) return;
+  $('#seed').innerHTML = c.live ? c.seeds.map(s=>`<option value="${s}">${s}</option>`).join('')
+                                : '<option value="42">—</option>';
+  $('#seed').disabled = !c.live;
+  const arms = c.live ? ['reference','linear','datadriven','multifidelity']
+                      : ['reference','linear'];
+  $('#legend').innerHTML = arms.map(k=>
+     `<span><i style="border-top-color:${COL[k]};border-top-style:${DASH[k]==='dot'?'dotted':'solid'}"></i>${NAME[k]}</span>`).join('');
+  $('#caseNote').innerHTML = c.live
+    ? (c.caveat
+       ? `<div class="notice"><span class="badge b-live">live inference</span>
+          &nbsp; all four responses are computed from real checkpoints, but note:
+          <b>${c.note}</b></div>`
+       : `<div style="margin-top:12px"><span class="badge b-live">${c.stored?'archived predictions':'live inference'}</span>
+          <span style="font-size:13px;color:var(--steel);margin-left:8px">
+          ${c.stored ? 'this row archives per-seed metrics only, so all four responses are replayed from the seed-42 predictions exported by the published run'
+                     : 'all four responses computed from the archived checkpoints'}</span></div>`)
+    : `<div class="notice"><span class="badge b-part">reference + Arm 1</span>
+       &nbsp; <b>${c.note}</b> Arm 2 and Arm 3 for this row are reported in the
+       benchmark summary above, from the archived per-seed logs.</div>`;
+  $('#sid').max = c.n != null ? c.n-1 : '';
+  $('#metricsCard').style.display='none'; $('#plotCard').style.display='none'; $('#error').innerHTML='';
+}
+
+function setBusy(b,msg){ busy=b; $('#run').disabled=b; $('#rand').disabled=b; $('#status').textContent=msg||''; }
+function showErr(m){ $('#error').innerHTML = m ? `<section class="card"><div class="card-b"><p class="err">${m}</p></div></section>` : ''; }
+
+function renderMetrics(d){
+  const ORDER = ['linear','datadriven','multifidelity'];
+  const arms = ORDER.filter(a => d.arms.includes(a));
+  const bestArm = arms.reduce((a,b)=> d.overall.r2[b] > d.overall.r2[a] ? b : a);
+  let h = `<thead><tr><th>${d.sensor_name}</th>`;
+  for (const a of arms) h += `<th><span class="sw" style="background:${COL[a]}"></span>${SHORT[a]} R²</th>`;
+  for (const a of arms) h += `<th>${SHORT[a]} peak err</th>`;
+  h += `<th>peak |u<sub>ref</sub>|</th></tr></thead><tbody>`;
+  for (const s of d.per_sensor){
+    h += `<tr><td>${d.sensor_name} ${s.sensor}${d.z?` <span style="color:var(--mute)">z = ${d.z[s.sensor-1].toFixed(2)} m</span>`:''}</td>`;
+    for (const a of arms) h += `<td class="num">${f4(s.r2[a])}</td>`;
+    for (const a of arms) h += `<td class="num">${f2(s.peak_err[a])}%</td>`;
+    h += `<td class="num">${s.peak_ref.toFixed(2)} ${d.unit}</td></tr>`;
+  }
+  const unit = d.sensor_name.toLowerCase();
+  h += `<tr class="tot"><td>All ${unit}s
+        <span style="font-weight:400;color:var(--mute)">pooled, this sample</span></td>`;
+  for (const a of arms) h += `<td class="num ${a===bestArm?'best':''}">${f4(d.overall.r2[a])}</td>`;
+  h += `<td class="num" colspan="${arms.length+1}" style="text-align:left;font-weight:400;color:var(--steel)">
+        Non-linearity of this sample — RMS of (reference − Arm 1) as a share of the
+        reference RMS: <b>${f2(d.overall.nonlinearity_pct)}%</b></td></tr>`;
+  if (d.per_sensor.length > 1){
+    const mR2 = a => d.per_sensor.reduce((s,x)=>s+x.r2[a],0)/d.per_sensor.length;
+    h += `<tr class="tot"><td>Mean per ${unit}
+          <span style="font-weight:400;color:var(--mute)">this sample only</span></td>`;
+    for (const a of arms) h += `<td class="num">${f4(mR2(a))}</td>`;
+    h += `<td class="num" colspan="${arms.length+1}" style="text-align:left;font-weight:400;color:var(--steel)">
+          Every ${unit} counted equally, each against <i>its own</i> mean over this one sample —
+          so this row scores only the fluctuation at each ${unit}, and goes sharply negative on
+          low-amplitude samples. It is <b>not</b> the &ldquo;unweighted&rdquo; column of the
+          benchmark summary, which takes one denominator per ${unit} across the whole test set.</td></tr>`;
+  }
+  h += `</tbody>`;
+  $('#metrics').innerHTML = h;
+  const SP = {test:['b-test','held-out test'],validation:['b-tr','validation'],train:['b-tr','training']};
+  const sp = SP[d.split];
+  $('#metricsSub').innerHTML =
+    `sample ${d.id}, seed ${d.seed}` +
+    (sp ? ` &nbsp;<span class="badge ${sp[0]}">${sp[1]} sample</span>`
+        : ` &nbsp;<span class="badge b-tr">not in any split &mdash; unused by this run</span>`);
+  $('#metricsCard').style.display='';
+}
+
+function renderPlot(d){
+  const S=d.per_sensor.length, tr=[], ann=[];
+  const order=['reference',...['linear','datadriven','multifidelity'].filter(a=>d.arms.includes(a))];
+  for (let s=0;s<S;s++){
+    const ax = s===0?'':(s+1);
+    for (const k of order){
+      tr.push({x:d.t, y:d.series[k][s], type:'scatter', mode:'lines', name:NAME[k],
+        legendgroup:k, showlegend:s===0,
+        line:{color:COL[k], width:k==='reference'?2.2:1.5, dash:DASH[k]},
+        xaxis:'x'+ax, yaxis:'y'+ax,
+        hovertemplate:`%{y:.3f} ${d.unit}<extra>${NAME[k]}</extra>`});
+    }
+    const zl = d.z ? `   z = ${d.z[s].toFixed(2)} m` : '';
+    ann.push({text:`<b>${d.sensor_name} ${s+1}</b>${zl}`, showarrow:false, xref:'paper',
+              yref:'y'+ax+' domain', x:0, xanchor:'left', y:1, yanchor:'bottom',
+              font:{size:34, color:'#1f2a37'}});
+  }
+  // TOP holds the legend plus the "Sensor 1" label above the first panel. The legend sits
+  // LEG px above the plotting area; TOP only needs LEG + the legend's own ~40 px line box.
+  const LEG = 76;
+  const H = (S <= 2 ? 560 : 370)*S + 99, TOP = LEG + 54, BOT = 124;
+  const legY = 1 + LEG/Math.max(H - TOP - BOT, 1);      // keep the legend clear of the
+  const lay={grid:{rows:S,columns:1,pattern:'independent',roworder:'top to bottom'},
+    height:H, margin:{l:152,r:30,t:TOP,b:BOT}, annotations:ann, hovermode:'x unified',
+    legend:{orientation:'h',y:legY,yanchor:'bottom',x:0,font:{size:31},
+            itemwidth:60, itemsizing:'constant', tracegroupgap:30},
+    paper_bgcolor:'#fff', plot_bgcolor:'#fff', font:{color:'#1f2a37',size:31,family:'Times New Roman, Times, serif'}};
+  for (let s=0;s<S;s++){ const ax=s===0?'':(s+1);
+    lay['xaxis'+ax]={gridcolor:'#e9edf1',zeroline:false,
+                     title:{text:s===S-1?'time  [s]':'',standoff:10,font:{size:34}},
+                     tickfont:{size:30}};
+    lay['yaxis'+ax]={gridcolor:'#e9edf1',zerolinecolor:'#c9d2da',
+                     title:{text:`u  [${d.unit}]`,standoff:8,font:{size:34}},
+                     tickfont:{size:30}}; }
+  Plotly.react('plot',tr,lay,{displaylogo:false,responsive:true});
+  $('#plotSub').textContent =
+     `${d.t.length} time steps · ${S} ${d.sensor_name.toLowerCase()}${S===1?'':'s'}`;
+  $('#plotCard').style.display='';
+}
+
+async function fetchOne(sid){
+  const r = await fetch(`/api/predict?case=${$('#case').value}&id=${sid}&seed=${$('#seed').value||42}`);
+  const d = await r.json();
+  if (!r.ok || d.error) throw new Error(d.error || ('HTTP '+r.status));
+  return d;
+}
+
+async function run(sid){
+  if (busy) return;
+  if (sid===undefined) sid = parseInt($('#sid').value,10)||0;
+  $('#sid').value = sid; showErr(''); setBusy(true,'computing…');
+  const t0=performance.now();
+  try{
+    const d = await fetchOne(sid);
+    renderMetrics(d); renderPlot(d);
+    setBusy(false, `done in ${((performance.now()-t0)/1000).toFixed(1)} s`);
+  }catch(e){ setBusy(false,''); showErr(e.message); }
+}
+
+async function findNonlinear(){
+  if (busy) return;
+  showErr('');
+  setBusy(true,'searching for a strongly non-linear sample…');
+  try{
+    const nMax = currentCase()?.n ?? null;
+    let pool = SPLIT[$('#split').value] || null;
+    if (pool && nMax) pool = pool.filter(i => i < nMax);   // guard against a stale split
+    if (pool && !pool.length) pool = null;
+    let best=null, n=null;
+    for (let k=0;k<8;k++){
+      const sid = pool ? pool[Math.floor(Math.random()*pool.length)]
+                       : Math.floor(Math.random()*(n ?? (currentCase().n ?? 300)));
+      const d = await fetchOne(sid); n = d.n;
+      if (!best || d.overall.nonlinearity_pct > best.overall.nonlinearity_pct) best=d;
+      if (d.overall.nonlinearity_pct > 40) break;
+    }
+    $('#sid').value = best.id; renderMetrics(best); renderPlot(best);
+    setBusy(false, `sample ${best.id} — Arm 1 residual ${f2(best.overall.nonlinearity_pct)}% RMS`);
+  }catch(e){ setBusy(false,''); showErr(e.message); }
+}
+
+// ── page rotation ───────────────────────────────────────────────────────────
+// 90/270 swap the pane's width and height so the rotated content still fills the
+// viewport exactly; the translate puts the rotated box back at the top-left corner.
+let ROT = 0;
+function applyRot(){
+  // innerWidth/innerHeight are device px; inside a zoomed root the pane's own coordinate
+  // system is scaled by ZOOM, so convert before sizing it.
+  const p = $('#page'), W = innerWidth / ZOOM, H = innerHeight / ZOOM, q = ROT % 180 !== 0;
+  document.body.classList.toggle('rotated', ROT !== 0);
+  p.style.width  = ROT ? (q ? H : W) + 'px' : '';
+  p.style.height = ROT ? (q ? W : H) + 'px' : '';
+  p.style.transform = ROT === 90  ? `translateX(${W}px) rotate(90deg)`
+                    : ROT === 180 ? `translate(${W}px,${H}px) rotate(180deg)`
+                    : ROT === 270 ? `translateY(${H}px) rotate(270deg)` : '';
+  $('#rotdeg').innerHTML = ROT + '&deg;';
+  // Plotly sizes to the container at draw time and does not reflow on its own.
+  const pl = $('#plot'); if (pl && pl.data) Plotly.Plots.resize(pl);
+}
+$('#rot').addEventListener('click',()=>{ ROT=(ROT+90)%360; applyRot(); });
+addEventListener('resize', ()=>{ if(ROT) applyRot(); });
+
+// ── in-page scale ───────────────────────────────────────────────────────────
+let ZOOM = parseFloat(localStorage.getItem('mfZoom')) || 1;
+function applyZoom(){
+  document.documentElement.style.zoom = ZOOM;
+  $('#zoomval').textContent = Math.round(ZOOM*100) + '%';
+  localStorage.setItem('mfZoom', ZOOM);
+  if (ROT) applyRot();
+  const pl = $('#plot'); if (pl && pl.data) Plotly.Plots.resize(pl);
+}
+const setZoom = f => { ZOOM = Math.min(2, Math.max(0.3, +f.toFixed(2))); applyZoom(); };
+$('#zoomout').addEventListener('click', ()=> setZoom(ZOOM - (ZOOM > 0.6 ? 0.1 : 0.05)));
+$('#zoomin') .addEventListener('click', ()=> setZoom(ZOOM + (ZOOM >= 0.6 ? 0.1 : 0.05)));
+$('#zoomreset').addEventListener('click', ()=> setZoom(1));
+applyZoom();
+
+$('#run').addEventListener('click',()=>run());
+$('#rand').addEventListener('click',findNonlinear);
+$('#case').addEventListener('change',()=>{showErr('');onCase();loadSplit();});
+$('#seed').addEventListener('change',()=>{showErr('');loadSplit();});
+$('#sid').addEventListener('keydown',e=>{ if(e.key==='Enter') run(); });
+loadSummary(); loadCases().then(loadSplit);
+</script>
+</body>
+</html>

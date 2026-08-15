@@ -1,0 +1,31 @@
+example,metric,seed,arm1,arm2,arm3
+"SDOF (eta 0.60-0.96, N=1500)",pooled,42,0.733500,0.373600,0.925000
+"SDOF (eta 0.60-0.96, N=1500)",pooled,0,0.748900,0.300900,0.904500
+"SDOF (eta 0.60-0.96, N=1500)",pooled,1,0.713800,0.309000,0.876000
+"SDOF (eta 0.60-0.96, N=1500)",pooled,2,0.803900,0.265100,0.910200
+"SDOF (eta 0.60-0.96, N=1500)",pooled,3,0.617100,0.258300,0.946000
+3-story frame v3,pooled,42,0.788011,0.715042,0.867142
+3-story frame v3,pooled,0,0.775414,0.709062,0.831409
+3-story frame v3,pooled,1,0.680999,0.670067,0.778234
+3-story frame v3,pooled,2,0.777292,0.679082,0.858395
+3-story frame v3,pooled,3,0.736376,0.759046,0.846115
+Tunnel moving-train (N=500),pooled,42,0.106486,0.916308,0.967089
+Tunnel moving-train (N=500),unweighted,42,-0.135985,0.738478,0.916281
+Turbine revised 60 s,pooled,42,0.750365,0.801642,0.941851
+Turbine revised 60 s,unweighted,42,0.124819,0.294102,0.794123
+Tunnel moving-train (N=500),pooled,0,0.170087,0.906240,0.959538
+Tunnel moving-train (N=500),unweighted,0,-0.024816,0.831849,0.809409
+Turbine revised 60 s,pooled,0,0.733905,0.800090,0.928989
+Turbine revised 60 s,unweighted,0,0.117341,0.331482,0.761099
+Tunnel moving-train (N=500),pooled,1,0.206471,0.909394,0.960539
+Tunnel moving-train (N=500),unweighted,1,0.000457,0.765737,0.794791
+Turbine revised 60 s,pooled,1,0.714553,0.616267,0.899036
+Turbine revised 60 s,unweighted,1,0.287446,0.040774,0.746319
+Tunnel moving-train (N=500),pooled,2,0.156463,0.957051,0.981517
+Tunnel moving-train (N=500),unweighted,2,-0.062066,0.637627,0.939550
+Turbine revised 60 s,pooled,2,0.762185,0.844267,0.943693
+Turbine revised 60 s,unweighted,2,-0.015989,0.327737,0.757742
+Tunnel moving-train (N=500),pooled,3,0.178779,0.907384,0.966902
+Tunnel moving-train (N=500),unweighted,3,-0.122076,0.672241,0.892008
+Turbine revised 60 s,pooled,3,0.743702,0.698709,0.924403
+Turbine revised 60 s,unweighted,3,0.287378,0.156525,0.785947
