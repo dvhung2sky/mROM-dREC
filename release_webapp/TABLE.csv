@@ -1,5 +1,5 @@
-example,metric,n_seeds,arm1_mean,arm1_sd,arm2_mean,arm2_sd,arm3_mean,arm3_sd,A3_minus_A2_mean,A3_minus_A2_sd,A3_minus_A1_mean,A3_minus_A1_sd,resid_removed_A3_pct_mean,resid_removed_A3_pct_sd
-"SDOF (eta 0.60-0.96, N=1500)",pooled,5,0.7234,0.0682,0.3014,0.0460,0.9123,0.0259,0.6110,0.0561,0.1889,0.0840,66.1,13.0
-3-story frame v3,pooled,5,0.7516,0.0441,0.7065,0.0351,0.8363,0.0351,0.1298,0.0364,0.0846,0.0203,34.2,6.5
-Tunnel moving-train (N=500),unweighted,5,-0.0689,0.0594,0.7292,0.0768,0.8704,0.0648,0.1412,0.1348,0.9393,0.1165,87.6,6.8
-Turbine revised 60 s,pooled,5,0.7409,0.0180,0.7522,0.0929,0.9276,0.0180,0.1754,0.0762,0.1867,0.0063,72.3,5.0
+example,metric,n_seeds,arm1_mean,arm1_sd,arm2_mean,arm2_sd,arm3_mean,arm3_sd,A3_minus_A2_mean,A3_minus_A2_sd,A3_minus_A1_mean,A3_minus_A1_sd
+"SDOF (eta 0.60-0.96, N=1500)",pooled,5,0.7234,0.0682,0.3014,0.0460,0.9123,0.0259,0.6110,0.0561,0.1889,0.0840
+3-story frame v3,pooled,5,0.7516,0.0441,0.7065,0.0351,0.8363,0.0351,0.1298,0.0364,0.0846,0.0203
+Tunnel moving-train (N=500),unweighted,5,-0.0689,0.0594,0.7292,0.0768,0.8704,0.0648,0.1412,0.1348,0.9393,0.1165
+Turbine V_hub<=20.2,unweighted,5,0.2730,0.0312,0.3061,0.1310,0.8631,0.0168,0.5570,0.1291,0.5901,0.0265

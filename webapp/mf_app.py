@@ -88,7 +88,7 @@ CASES = {
         arm2_script="arm2/wt_arm2_v20.py", arm2_ckpt="best_wt_arm2_v20_full_s{seed}.pt",
         env={"DB_PATH": "release_webapp/04_turbine/database/wt_v20_full.npz",
              "N_MAX": "0", "FLIP": "1", "STEP": "50", "SAMPLE_W": "0"},
-        # not in RESULTS.csv; each arm's own results CSV carries the test-split metrics
+        # the viewer reads each arm's own results CSV (RESULTS.csv repeats these rows)
         results_csv=("arm3/wt_arm3_v20_full{suf}_results.csv",
                      "arm2/wt_arm2_v20_full{suf}_results.csv"),
         metric="unweighted mean over sensors",

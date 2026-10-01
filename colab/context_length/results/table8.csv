@@ -1,0 +1,5 @@
+System,L = 0,L = 12,L = 25,L = 50
+Buried tunnel,-0.1987*,-0.0231*,-0.0152*,-0.0085
+Wind turbine,-0.0537*,-0.0004,+0.0025,+0.0113
+Single-degree-of-freedom,-0.0312+,-0.0067,-0.0280,-0.0060
+Three-storey steel frame,-0.0042,+0.0069,+0.0020,+0.0021

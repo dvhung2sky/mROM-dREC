@@ -631,7 +631,8 @@ while len(params_list) < N_SAMPLES:
     demand_unit = max(max(demands), 1e-12)
 
     # Target worst-hinge ductility/demand → force scale
-    target_mu = rng.uniform(0.6, 2.0)   # v3: milder (was 0.6-4.0)
+    target_mu = rng.uniform(float(__import__("os").environ.get("MU_LO", 0.6)),
+                            float(__import__("os").environ.get("MU_HI", 2.0)))   # v3: 0.6-2.0; MU_HI is the Table 6 knob
     scale     = target_mu / demand_unit
 
     F_global  = F_unit_full * scale
@@ -735,7 +736,7 @@ th2_lin_arr   = np.array(th2_lin_list,   dtype=np.float32)
 th3_lin_arr   = np.array(th3_lin_list,   dtype=np.float32)
 converged_arr = np.array(converged_list, dtype=bool)
 
-OUT_NPZ = "frame3_v3_database.npz"
+OUT_NPZ = __import__("os").environ.get("OUT_DB", "frame3_v3_database.npz")
 np.savez_compressed(
     OUT_NPZ,
     params     = params_arr,
