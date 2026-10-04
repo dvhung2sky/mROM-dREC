@@ -27,7 +27,7 @@ import matplotlib.pyplot as plt
 # ─────────────────────────────────────────────────────────────────────────────
 # 0.  Setup
 # ─────────────────────────────────────────────────────────────────────────────
-SEED = int(__import__("os").environ.get("SEED", 42))
+SEED = 42
 torch.manual_seed(SEED)
 np.random.seed(SEED)
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")

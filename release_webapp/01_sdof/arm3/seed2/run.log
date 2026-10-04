@@ -1,0 +1,62 @@
+Device : cpu
+Loaded 1500/1500 converged samples  |  seq_len = 500  |  dt = 0.0100 s
+L_all=200  L_in=100  L_out=100  sliding_step=15
+70/15/15 -> train 1050  val 225  test 225
+Train : 1050   Val : 225
+  η range : 0.6009 – 0.9595  (mean=0.781)
+Δu/σ_u_lin ratio  |  range: [-36.137, 19.328]  std=1.015
+duct_pos |  range: [0.000, 3.550]  duct_neg |  range: [0.000, 3.451]
+Running cheap bilinear-EPP solver (drift-aware physics prior) …
+  Bilinear solver time : 2.1s  u_approx range=[-0.3933, 0.2964]  u_p range=[-0.1591, 0.0706]
+delta_approx / σ  |  std=1.015
+up_approx    / σ  |  std=0.993  range=[-34.277, 16.688]
+net_drift_bias    |  range: [-22.405, 12.568]
+Static features : [m, k, c, fn, ξ, α, fy, η, net_drift]  (9-dim)
+RMS u_lin=0.009539  RMS Δu=0.006040  ratio=0.633
+Building training windows (original) …
+Building training windows (sign-flipped augmentation) …
+Building validation windows …
+Train windows : 56700   Val windows : 6075
+X_time shape : (56700, 200, 5)   X_static shape : (56700, 1, 9)   Y shape : (56700, 100)
+
+FiLMStaticEncoder      : 43,490
+RepresentationLearning : 235,200  (GRU hidden=160, layers=2)
+PredictionHead         : 10,368
+ForceSkip              : 353
+Total parameters       : 289,411
+
+────────────────────────────────────────────────────────────────────────
+ Epoch   Train MSE     Val MSE   Train R²     Val R²         LR
+────────────────────────────────────────────────────────────────────────
+     1     0.52962     2.08135     0.3185     0.1850   3.05e-04
+    10     0.05071     0.61952     0.9348     0.7574   9.25e-04
+────────────────────────────────────────────────────────────────────────
+Training  |  wall: 2437.7s  |  CPU: 2421.2s
+Inference |  wall: 1.9s  |  CPU: 1.9s
+
+────────────────────────────────────────────────────────────
+  Validation — physical units (multi-fidelity v2)
+────────────────────────────────────────────────────────────
+  Best epoch             : 6
+  Val MSE (norm)         : 0.52700
+
+  Metric                         Linear only  Multi-fidelity
+  ────────────────────────────────────────────────────────
+  Global R²                           0.8039          0.9102
+  RMSE mean [mm]                       1.876           1.272
+  RMSE std  [mm]                       3.413           2.307
+  Peak error mean [%]                   9.35            7.12
+  Peak error median [%]                 4.16            3.33
+  Peak error 90th [%]                  25.25           17.85
+sdof_arm3_noepp_db.py:859: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
+  plt.show()
+sdof_arm3_noepp_db.py:896: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
+  plt.show()
+
+Running inference on training set for PSD …
+sdof_arm3_noepp_db.py:944: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
+  plt.show()
+sdof_arm3_noepp_db.py:988: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
+  plt.show()
+
+Saved: mf_training_summary.png | mf_predictions.png | mf_psd.png | mf_peak_pdf.png | best_nlsdof_multifidelity.pt

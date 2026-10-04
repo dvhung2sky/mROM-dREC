@@ -1,0 +1,2 @@
+system,variant,dof,best_epoch,arm2_R2,arm2_MAPE_pct,arm2_RMSE_mm
+SDOF,nofb,u,14,0.309,37.6,4.8565

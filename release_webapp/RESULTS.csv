@@ -11,21 +11,21 @@ example,metric,seed,arm1,arm2,arm3
 3-story frame v3,pooled,3,0.736376,0.759046,0.846115
 Tunnel moving-train (N=500),pooled,42,0.106486,0.916308,0.967089
 Tunnel moving-train (N=500),unweighted,42,-0.135985,0.738478,0.916281
-Turbine revised 60 s,pooled,42,0.750365,0.801642,0.941851
-Turbine revised 60 s,unweighted,42,0.124819,0.294102,0.794123
 Tunnel moving-train (N=500),pooled,0,0.170087,0.906240,0.959538
 Tunnel moving-train (N=500),unweighted,0,-0.024816,0.831849,0.809409
-Turbine revised 60 s,pooled,0,0.733905,0.800090,0.928989
-Turbine revised 60 s,unweighted,0,0.117341,0.331482,0.761099
 Tunnel moving-train (N=500),pooled,1,0.206471,0.909394,0.960539
 Tunnel moving-train (N=500),unweighted,1,0.000457,0.765737,0.794791
-Turbine revised 60 s,pooled,1,0.714553,0.616267,0.899036
-Turbine revised 60 s,unweighted,1,0.287446,0.040774,0.746319
 Tunnel moving-train (N=500),pooled,2,0.156463,0.957051,0.981517
 Tunnel moving-train (N=500),unweighted,2,-0.062066,0.637627,0.939550
-Turbine revised 60 s,pooled,2,0.762185,0.844267,0.943693
-Turbine revised 60 s,unweighted,2,-0.015989,0.327737,0.757742
 Tunnel moving-train (N=500),pooled,3,0.178779,0.907384,0.966902
 Tunnel moving-train (N=500),unweighted,3,-0.122076,0.672241,0.892008
-Turbine revised 60 s,pooled,3,0.743702,0.698709,0.924403
-Turbine revised 60 s,unweighted,3,0.287378,0.156525,0.785947
+Turbine V_hub<=20.2,pooled,42,0.781366,0.812259,0.959843
+Turbine V_hub<=20.2,unweighted,42,0.220272,0.328604,0.854576
+Turbine V_hub<=20.2,pooled,0,0.751979,0.776920,0.950695
+Turbine V_hub<=20.2,unweighted,0,0.288896,0.356958,0.856052
+Turbine V_hub<=20.2,pooled,1,0.779824,0.715584,0.958657
+Turbine V_hub<=20.2,unweighted,1,0.288451,0.077556,0.863738
+Turbine V_hub<=20.2,pooled,2,0.767839,0.797838,0.953075
+Turbine V_hub<=20.2,unweighted,2,0.269461,0.357953,0.849448
+Turbine V_hub<=20.2,pooled,3,0.786579,0.822109,0.967855
+Turbine V_hub<=20.2,unweighted,3,0.297910,0.409364,0.891849

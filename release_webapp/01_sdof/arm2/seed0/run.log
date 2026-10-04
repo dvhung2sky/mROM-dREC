@@ -1,0 +1,10 @@
+[SDOF] N=1500 70/15/15 -> train 1050 val 225 test 225
+[SDOF] windows train/val = 13650/2925
+[SDOF] ep   1  val_mse 0.84415  val_r2 0.0175
+[SDOF] ep   5  val_mse 0.65009  val_r2 0.2434
+[SDOF] ep  10  val_mse 0.62508  val_r2 0.2725
+[SDOF] ep  15  val_mse 0.61669  val_r2 0.2822
+[SDOF] best ep 15  (204s)
+  SDOF u: R2=0.3009 peak%=49.72 RMSE=3.064mm
+
+wrote arm2_datadriven.csv (+1 rows)

@@ -1,0 +1,1123 @@
+0/80 already done, 80 to go
+
+[ 1/80] sdof/full/s42              ...
+  prep sdof: N=1500 T=500 S=1 channels=5 statics=5 | train 1050 val 225 test 225 | 5250 train windows (5/sample) | 0.4s
+    ep  1/10  train 0.50989  val 0.56625  *
+    ep  2/10  train 0.23251  val 0.35072  *
+    ep  3/10  train 1.96569  val 0.15792  *
+    ep  4/10  train 0.13178  val 0.14585  *
+    ep  5/10  train 0.07464  val 0.14509  *
+    ep  6/10  train 0.21245  val 0.18211
+    ep  7/10  train 7.38206  val 0.15500
+    ep  8/10  train 0.05908  val 0.12740  *
+    ep  9/10  train 0.04840  val 0.12534  *
+    ep 10/10  train 0.09411  val 0.12137  *
+   R2=+0.6376  unweighted=+0.6376  arm1=+0.5869  10s   | 1 this session in 0m, ETA 22m
+
+[ 2/80] sdof/full/s0               ...
+  prep sdof: N=1500 T=500 S=1 channels=5 statics=5 | train 1050 val 225 test 225 | 5250 train windows (5/sample) | 0.2s
+    ep  1/10  train 0.17735  val 0.92289  *
+    ep  2/10  train 0.27952  val 0.69242  *
+    ep  3/10  train 0.33783  val 0.66284  *
+    ep  4/10  train 0.04863  val 0.44513  *
+    ep  5/10  train 0.47255  val 0.39191  *
+    ep  6/10  train 0.22904  val 0.37431  *
+    ep  7/10  train 0.52171  val 0.34755  *
+    ep  8/10  train 0.15312  val 0.33013  *
+    ep  9/10  train 0.15448  val 0.33915
+    ep 10/10  train 0.05589  val 0.33371
+   R2=+0.6880  unweighted=+0.6880  arm1=+0.6477  9s   | 2 this session in 0m, ETA 18m
+
+[ 3/80] sdof/full/s1               ...
+  prep sdof: N=1500 T=500 S=1 channels=5 statics=5 | train 1050 val 225 test 225 | 5250 train windows (5/sample) | 0.2s
+    ep  1/10  train 0.31306  val 1.91534  *
+    ep  2/10  train 0.68896  val 1.44264  *
+    ep  3/10  train 0.10087  val 0.78544  *
+    ep  4/10  train 0.38457  val 0.66348  *
+    ep  5/10  train 1.03963  val 0.62795  *
+    ep  6/10  train 0.19992  val 0.60068  *
+    ep  7/10  train 0.20093  val 0.58377  *
+    ep  8/10  train 0.05276  val 0.56221  *
+    ep  9/10  train 0.23810  val 0.55630  *
+    ep 10/10  train 0.06077  val 0.55066  *
+   R2=+0.6961  unweighted=+0.6961  arm1=+0.6736  9s   | 3 this session in 1m, ETA 16m
+
+[ 4/80] sdof/full/s2               ...
+  prep sdof: N=1500 T=500 S=1 channels=5 statics=5 | train 1050 val 225 test 225 | 5250 train windows (5/sample) | 0.2s
+    ep  1/10  train 0.67670  val 3.22782  *
+    ep  2/10  train 1.52750  val 2.74964  *
+    ep  3/10  train 0.19286  val 2.59716  *
+    ep  4/10  train 0.15479  val 2.63725
+    ep  5/10  train 0.41576  val 2.70833
+    ep  6/10  train 0.45882  val 2.58760  *
+    ep  7/10  train 0.43202  val 2.67210
+    ep  8/10  train 0.10781  val 2.58379  *
+    ep  9/10  train 0.05325  val 2.59560
+    ep 10/10  train 0.13710  val 2.59018
+   R2=+0.6208  unweighted=+0.6208  arm1=+0.5506  9s   | 4 this session in 1m, ETA 15m
+
+[ 5/80] sdof/full/s3               ...
+  prep sdof: N=1500 T=500 S=1 channels=5 statics=5 | train 1050 val 225 test 225 | 5250 train windows (5/sample) | 0.2s
+    ep  1/10  train 0.27081  val 0.94518  *
+    ep  2/10  train 0.35369  val 0.64999  *
+    ep  3/10  train 0.47492  val 0.54347  *
+    ep  4/10  train 0.10242  val 0.33990  *
+    ep  5/10  train 0.61889  val 0.31214  *
+    ep  6/10  train 0.03439  val 0.25798  *
+    ep  7/10  train 0.08409  val 0.25297  *
+    ep  8/10  train 0.06898  val 0.24758  *
+    ep  9/10  train 0.05762  val 0.23342  *
+    ep 10/10  train 0.13919  val 0.22877  *
+   R2=+0.7960  unweighted=+0.7960  arm1=+0.7890  10s   | 5 this session in 1m, ETA 15m
+
+[ 6/80] sdof/nofilm/s42            ...
+  prep sdof: N=1500 T=500 S=1 channels=5 statics=5 | train 1050 val 225 test 225 | 5250 train windows (5/sample) | 0.1s
+    ep  1/10  train 0.52991  val 0.56279  *
+    ep  2/10  train 0.41197  val 0.37228  *
+    ep  3/10  train 1.50032  val 0.36242  *
+    ep  4/10  train 0.20779  val 0.21574  *
+    ep  5/10  train 0.11526  val 0.28196
+    ep  6/10  train 0.20219  val 0.19684  *
+    ep  7/10  train 7.10705  val 0.15173  *
+    ep  8/10  train 0.06879  val 0.13371  *
+    ep  9/10  train 0.05228  val 0.12940  *
+    ep 10/10  train 0.09206  val 0.12786  *
+   R2=+0.7230  unweighted=+0.7230  arm1=+0.5869  10s   | 6 this session in 1m, ETA 14m
+
+[ 7/80] sdof/nofilm/s0             ...
+  prep sdof: N=1500 T=500 S=1 channels=5 statics=5 | train 1050 val 225 test 225 | 5250 train windows (5/sample) | 0.1s
+    ep  1/10  train 0.18037  val 0.92278  *
+    ep  2/10  train 0.31810  val 0.68232  *
+    ep  3/10  train 0.28904  val 0.53319  *
+    ep  4/10  train 0.08417  val 0.44720  *
+    ep  5/10  train 0.45639  val 0.37836  *
+    ep  6/10  train 0.20397  val 0.37837
+    ep  7/10  train 0.50141  val 0.36246  *
+    ep  8/10  train 0.18316  val 0.34174  *
+    ep  9/10  train 0.13563  val 0.34607
+    ep 10/10  train 0.08333  val 0.33945  *
+   R2=+0.7076  unweighted=+0.7076  arm1=+0.6477  10s   | 7 this session in 1m, ETA 14m
+
+[ 8/80] sdof/nofilm/s1             ...
+  prep sdof: N=1500 T=500 S=1 channels=5 statics=5 | train 1050 val 225 test 225 | 5250 train windows (5/sample) | 0.1s
+    ep  1/10  train 0.31808  val 1.90639  *
+    ep  2/10  train 0.56475  val 1.27620  *
+    ep  3/10  train 0.18358  val 1.22962  *
+    ep  4/10  train 0.60900  val 0.79806  *
+    ep  5/10  train 1.07465  val 0.80782
+    ep  6/10  train 0.19970  val 0.62612  *
+    ep  7/10  train 0.16696  val 0.56249  *
+    ep  8/10  train 0.05469  val 0.54258  *
+    ep  9/10  train 0.21059  val 0.53502  *
+    ep 10/10  train 0.09214  val 0.53508
+   R2=+0.6884  unweighted=+0.6884  arm1=+0.6736  10s   | 8 this session in 2m, ETA 14m
+
+[ 9/80] sdof/nofilm/s2             ...
+  prep sdof: N=1500 T=500 S=1 channels=5 statics=5 | train 1050 val 225 test 225 | 5250 train windows (5/sample) | 0.2s
+    ep  1/10  train 0.65768  val 3.22809  *
+    ep  2/10  train 1.50941  val 2.82893  *
+    ep  3/10  train 0.49271  val 3.21883
+    ep  4/10  train 1.68070  val 3.20206
+    ep  5/10  train 0.64871  val 3.03896
+    ep  6/10  train 0.57564  val 2.66732  *
+    ep  7/10  train 0.45941  val 2.57533  *
+    ep  8/10  train 0.19474  val 2.76453
+    ep  9/10  train 0.07256  val 2.74962
+    ep 10/10  train 0.15898  val 2.73914
+   R2=+0.5540  unweighted=+0.5540  arm1=+0.5506  10s   | 9 this session in 2m, ETA 13m
+
+[10/80] sdof/nofilm/s3             ...
+  prep sdof: N=1500 T=500 S=1 channels=5 statics=5 | train 1050 val 225 test 225 | 5250 train windows (5/sample) | 0.1s
+    ep  1/10  train 0.26198  val 0.94400  *
+    ep  2/10  train 0.29014  val 0.62941  *
+    ep  3/10  train 0.35099  val 0.49741  *
+    ep  4/10  train 0.09358  val 0.42664  *
+    ep  5/10  train 0.65435  val 0.25621  *
+    ep  6/10  train 0.04596  val 0.23155  *
+    ep  7/10  train 0.08404  val 0.23923
+    ep  8/10  train 0.06681  val 0.23436
+    ep  9/10  train 0.05664  val 0.21607  *
+    ep 10/10  train 0.13620  val 0.21631
+   R2=+0.7849  unweighted=+0.7849  arm1=+0.7890  10s   | 10 this session in 2m, ETA 13m
+
+[11/80] sdof/noskip/s42            ...
+  prep sdof: N=1500 T=500 S=1 channels=5 statics=5 | train 1050 val 225 test 225 | 5250 train windows (5/sample) | 0.2s
+    ep  1/10  train 0.51037  val 0.56626  *
+    ep  2/10  train 0.39969  val 0.46786  *
+    ep  3/10  train 2.11954  val 0.26900  *
+    ep  4/10  train 0.12092  val 0.14703  *
+    ep  5/10  train 0.07688  val 0.15448
+    ep  6/10  train 0.20124  val 0.14828
+    ep  7/10  train 6.41035  val 0.14482  *
+    ep  8/10  train 0.07009  val 0.13144  *
+    ep  9/10  train 0.04293  val 0.12430  *
+    ep 10/10  train 0.08223  val 0.12172  *
+   R2=+0.6884  unweighted=+0.6884  arm1=+0.5869  10s   | 11 this session in 2m, ETA 13m
+
+[12/80] sdof/noskip/s0             ...
+  prep sdof: N=1500 T=500 S=1 channels=5 statics=5 | train 1050 val 225 test 225 | 5250 train windows (5/sample) | 0.1s
+    ep  1/10  train 0.17842  val 0.92385  *
+    ep  2/10  train 0.23557  val 0.71582  *
+    ep  3/10  train 0.42821  val 0.63149  *
+    ep  4/10  train 0.09937  val 0.49744  *
+    ep  5/10  train 0.54833  val 0.40520  *
+    ep  6/10  train 0.21735  val 0.40060  *
+    ep  7/10  train 0.49036  val 0.35460  *
+    ep  8/10  train 0.17030  val 0.33336  *
+    ep  9/10  train 0.14934  val 0.33285  *
+    ep 10/10  train 0.06077  val 0.33266  *
+   R2=+0.7070  unweighted=+0.7070  arm1=+0.6477  10s   | 12 this session in 2m, ETA 13m
+
+[13/80] sdof/noskip/s1             ...
+  prep sdof: N=1500 T=500 S=1 channels=5 statics=5 | train 1050 val 225 test 225 | 5250 train windows (5/sample) | 0.1s
+    ep  1/10  train 0.31335  val 1.91570  *
+    ep  2/10  train 0.64790  val 1.46927  *
+    ep  3/10  train 0.15072  val 0.89127  *
+    ep  4/10  train 0.49346  val 0.77567  *
+    ep  5/10  train 0.96558  val 0.70704  *
+    ep  6/10  train 0.23586  val 0.64056  *
+    ep  7/10  train 0.19418  val 0.61869  *
+    ep  8/10  train 0.05162  val 0.58748  *
+    ep  9/10  train 0.20615  val 0.57948  *
+    ep 10/10  train 0.05563  val 0.57678  *
+   R2=+0.6943  unweighted=+0.6943  arm1=+0.6736  10s   | 13 this session in 2m, ETA 13m
+
+[14/80] sdof/noskip/s2             ...
+  prep sdof: N=1500 T=500 S=1 channels=5 statics=5 | train 1050 val 225 test 225 | 5250 train windows (5/sample) | 0.2s
+    ep  1/10  train 0.67655  val 3.22691  *
+    ep  2/10  train 1.48426  val 2.78726  *
+    ep  3/10  train 0.19863  val 2.61360  *
+    ep  4/10  train 0.17985  val 2.63896
+    ep  5/10  train 0.26825  val 2.28181  *
+    ep  6/10  train 0.42751  val 2.24611  *
+    ep  7/10  train 0.38478  val 2.57994
+    ep  8/10  train 0.13653  val 2.50860
+    ep  9/10  train 0.03872  val 2.44195
+    ep 10/10  train 0.09716  val 2.46715
+   R2=+0.6318  unweighted=+0.6318  arm1=+0.5506  10s   | 14 this session in 3m, ETA 12m
+
+[15/80] sdof/noskip/s3             ...
+  prep sdof: N=1500 T=500 S=1 channels=5 statics=5 | train 1050 val 225 test 225 | 5250 train windows (5/sample) | 0.2s
+    ep  1/10  train 0.27066  val 0.94526  *
+    ep  2/10  train 0.31584  val 0.60489  *
+    ep  3/10  train 0.51163  val 0.49865  *
+    ep  4/10  train 0.11625  val 0.30165  *
+    ep  5/10  train 0.62585  val 0.27794  *
+    ep  6/10  train 0.04205  val 0.25492  *
+    ep  7/10  train 0.08728  val 0.24893  *
+    ep  8/10  train 0.06799  val 0.22746  *
+    ep  9/10  train 0.05062  val 0.22147  *
+    ep 10/10  train 0.13284  val 0.21750  *
+   R2=+0.7886  unweighted=+0.7886  arm1=+0.7890  10s   | 15 this session in 3m, ETA 12m
+
+[16/80] sdof/nozeroinit/s42        ...
+  prep sdof: N=1500 T=500 S=1 channels=5 statics=5 | train 1050 val 225 test 225 | 5250 train windows (5/sample) | 0.1s
+    ep  1/10  train 0.51155  val 0.56366  *
+    ep  2/10  train 0.21664  val 0.28517  *
+    ep  3/10  train 2.01578  val 0.18370  *
+    ep  4/10  train 0.13617  val 0.16201  *
+    ep  5/10  train 0.07514  val 0.14364  *
+    ep  6/10  train 0.16758  val 0.14856
+    ep  7/10  train 7.49972  val 0.14505
+    ep  8/10  train 0.06948  val 0.13255  *
+    ep  9/10  train 0.06022  val 0.12426  *
+    ep 10/10  train 0.08386  val 0.11925  *
+   R2=+0.6933  unweighted=+0.6933  arm1=+0.5869  10s   | 16 this session in 3m, ETA 12m
+
+[17/80] sdof/nozeroinit/s0         ...
+  prep sdof: N=1500 T=500 S=1 channels=5 statics=5 | train 1050 val 225 test 225 | 5250 train windows (5/sample) | 0.1s
+    ep  1/10  train 0.18642  val 0.92823  *
+    ep  2/10  train 0.19638  val 0.67183  *
+    ep  3/10  train 0.33251  val 0.42278  *
+    ep  4/10  train 0.04677  val 0.39958  *
+    ep  5/10  train 0.42530  val 0.35824  *
+    ep  6/10  train 0.20580  val 0.35395  *
+    ep  7/10  train 0.49910  val 0.34326  *
+    ep  8/10  train 0.14888  val 0.33395  *
+    ep  9/10  train 0.07548  val 0.34322
+    ep 10/10  train 0.07631  val 0.33766
+   R2=+0.6730  unweighted=+0.6730  arm1=+0.6477  10s   | 17 this session in 3m, ETA 12m
+
+[18/80] sdof/nozeroinit/s1         ...
+  prep sdof: N=1500 T=500 S=1 channels=5 statics=5 | train 1050 val 225 test 225 | 5250 train windows (5/sample) | 0.1s
+    ep  1/10  train 0.30608  val 1.90737  *
+    ep  2/10  train 0.59387  val 1.14807  *
+    ep  3/10  train 0.07102  val 0.63689  *
+    ep  4/10  train 0.33457  val 0.62362  *
+    ep  5/10  train 0.99666  val 0.69109
+    ep  6/10  train 0.22326  val 0.56318  *
+    ep  7/10  train 0.15229  val 0.51748  *
+    ep  8/10  train 0.05024  val 0.49587  *
+    ep  9/10  train 0.22463  val 0.49752
+    ep 10/10  train 0.07515  val 0.49558  *
+   R2=+0.7381  unweighted=+0.7381  arm1=+0.6736  10s   | 18 this session in 3m, ETA 12m
+
+[19/80] sdof/nozeroinit/s2         ...
+  prep sdof: N=1500 T=500 S=1 channels=5 statics=5 | train 1050 val 225 test 225 | 5250 train windows (5/sample) | 0.1s
+    ep  1/10  train 0.66883  val 3.22198  *
+    ep  2/10  train 0.97628  val 2.64748  *
+    ep  3/10  train 0.23939  val 2.54156  *
+    ep  4/10  train 0.36630  val 2.71367
+    ep  5/10  train 0.29819  val 2.48061  *
+    ep  6/10  train 0.46330  val 2.36458  *
+    ep  7/10  train 0.39470  val 2.63224
+    ep  8/10  train 0.14628  val 2.52989
+    ep  9/10  train 0.04531  val 2.57572
+    ep 10/10  train 0.09550  val 2.56967
+   R2=+0.6501  unweighted=+0.6501  arm1=+0.5506  10s   | 19 this session in 4m, ETA 12m
+
+[20/80] sdof/nozeroinit/s3         ...
+  prep sdof: N=1500 T=500 S=1 channels=5 statics=5 | train 1050 val 225 test 225 | 5250 train windows (5/sample) | 0.2s
+    ep  1/10  train 0.27117  val 0.94407  *
+    ep  2/10  train 0.25525  val 0.53696  *
+    ep  3/10  train 0.53718  val 0.51076  *
+    ep  4/10  train 0.07823  val 0.30805  *
+    ep  5/10  train 0.60287  val 0.27521  *
+    ep  6/10  train 0.05203  val 0.25046  *
+    ep  7/10  train 0.09788  val 0.25316
+    ep  8/10  train 0.06678  val 0.25065
+    ep  9/10  train 0.05253  val 0.24200  *
+    ep 10/10  train 0.15977  val 0.23537  *
+   R2=+0.8003  unweighted=+0.8003  arm1=+0.7890  10s   | 20 this session in 4m, ETA 11m
+
+[21/80] frame3/full/s42            ...
+  prep frame3: N=970 T=2000 S=3 channels=14 statics=33 | train 679 val 145 test 146 | 6790 train windows (10/sample) | 1.3s
+    ep  1/10  train 0.60738  val 0.96692  *
+    ep  2/10  train 0.28158  val 0.75551  *
+    ep  3/10  train 0.55220  val 0.50554  *
+    ep  4/10  train 0.19743  val 0.39199  *
+    ep  5/10  train 0.21685  val 0.42704
+    ep  6/10  train 0.11375  val 0.38260  *
+    ep  7/10  train 0.12027  val 0.29881  *
+    ep  8/10  train 0.21900  val 0.29968
+    ep  9/10  train 0.16919  val 0.28671  *
+    ep 10/10  train 0.10974  val 0.28653  *
+   R2=+0.8564  unweighted=+0.8456  arm1=+0.7880  14s   | 21 this session in 4m, ETA 11m
+
+[22/80] frame3/full/s0             ...
+  prep frame3: N=970 T=2000 S=3 channels=14 statics=33 | train 679 val 145 test 146 | 6790 train windows (10/sample) | 1.0s
+    ep  1/10  train 0.56443  val 0.67254  *
+    ep  2/10  train 0.52681  val 0.52912  *
+    ep  3/10  train 0.58264  val 0.41424  *
+    ep  4/10  train 0.69335  val 0.33642  *
+    ep  5/10  train 0.17174  val 0.29078  *
+    ep  6/10  train 0.28934  val 0.26794  *
+    ep  7/10  train 0.31204  val 0.23927  *
+    ep  8/10  train 0.18399  val 0.24254
+    ep  9/10  train 0.26253  val 0.22941  *
+    ep 10/10  train 0.08070  val 0.23121
+   R2=+0.8055  unweighted=+0.7910  arm1=+0.7754  14s   | 22 this session in 4m, ETA 12m
+
+[23/80] frame3/full/s1             ...
+  prep frame3: N=970 T=2000 S=3 channels=14 statics=33 | train 679 val 145 test 146 | 6790 train windows (10/sample) | 1.0s
+    ep  1/10  train 0.52616  val 0.95992  *
+    ep  2/10  train 0.40220  val 0.64385  *
+    ep  3/10  train 0.36073  val 0.51158  *
+    ep  4/10  train 1.08381  val 0.48559  *
+    ep  5/10  train 0.28789  val 0.39920  *
+    ep  6/10  train 0.19528  val 0.32133  *
+    ep  7/10  train 0.27186  val 0.32241
+    ep  8/10  train 0.12196  val 0.29413  *
+    ep  9/10  train 0.13454  val 0.28391  *
+    ep 10/10  train 0.15023  val 0.28499
+   R2=+0.7661  unweighted=+0.7483  arm1=+0.6810  14s   | 23 this session in 5m, ETA 12m
+
+[24/80] frame3/full/s2             ...
+  prep frame3: N=970 T=2000 S=3 channels=14 statics=33 | train 679 val 145 test 146 | 6790 train windows (10/sample) | 1.0s
+    ep  1/10  train 1.73145  val 0.90426  *
+    ep  2/10  train 0.21820  val 0.62462  *
+    ep  3/10  train 0.46786  val 0.56347  *
+    ep  4/10  train 0.54290  val 0.45307  *
+    ep  5/10  train 0.27988  val 0.48078
+    ep  6/10  train 0.14079  val 0.37716  *
+    ep  7/10  train 0.21286  val 0.33693  *
+    ep  8/10  train 0.15431  val 0.33382  *
+    ep  9/10  train 0.10909  val 0.32471  *
+    ep 10/10  train 0.09105  val 0.32881
+   R2=+0.8135  unweighted=+0.7892  arm1=+0.7773  14s   | 24 this session in 5m, ETA 12m
+
+[25/80] frame3/full/s3             ...
+  prep frame3: N=970 T=2000 S=3 channels=14 statics=33 | train 679 val 145 test 146 | 6790 train windows (10/sample) | 1.3s
+    ep  1/10  train 1.17549  val 1.09747  *
+    ep  2/10  train 0.83261  val 0.79882  *
+    ep  3/10  train 0.72367  val 0.69685  *
+    ep  4/10  train 0.35981  val 0.56061  *
+    ep  5/10  train 0.32517  val 0.50801  *
+    ep  6/10  train 0.21184  val 0.48678  *
+    ep  7/10  train 0.27979  val 0.45771  *
+    ep  8/10  train 0.18770  val 0.43514  *
+    ep  9/10  train 0.13739  val 0.43226  *
+    ep 10/10  train 0.17306  val 0.42842  *
+   R2=+0.8134  unweighted=+0.8049  arm1=+0.7364  14s   | 25 this session in 5m, ETA 12m
+
+[26/80] frame3/nofilm/s42          ...
+  prep frame3: N=970 T=2000 S=3 channels=14 statics=33 | train 679 val 145 test 146 | 6790 train windows (10/sample) | 1.0s
+    ep  1/10  train 0.60655  val 0.96301  *
+    ep  2/10  train 0.21450  val 0.69827  *
+    ep  3/10  train 0.67948  val 0.54165  *
+    ep  4/10  train 0.20936  val 0.43032  *
+    ep  5/10  train 0.25828  val 0.47299
+    ep  6/10  train 0.14122  val 0.41796  *
+    ep  7/10  train 0.12010  val 0.35138  *
+    ep  8/10  train 0.22533  val 0.34084  *
+    ep  9/10  train 0.18574  val 0.31283  *
+    ep 10/10  train 0.11813  val 0.31371
+   R2=+0.8255  unweighted=+0.8109  arm1=+0.7880  14s   | 26 this session in 6m, ETA 12m
+
+[27/80] frame3/nofilm/s0           ...
+  prep frame3: N=970 T=2000 S=3 channels=14 statics=33 | train 679 val 145 test 146 | 6790 train windows (10/sample) | 1.0s
+    ep  1/10  train 0.56330  val 0.67717  *
+    ep  2/10  train 0.42050  val 0.45935  *
+    ep  3/10  train 0.45729  val 0.39674  *
+    ep  4/10  train 0.63362  val 0.34557  *
+    ep  5/10  train 0.18760  val 0.30391  *
+    ep  6/10  train 0.34975  val 0.25971  *
+    ep  7/10  train 0.30305  val 0.25886  *
+    ep  8/10  train 0.19829  val 0.24960  *
+    ep  9/10  train 0.23502  val 0.23677  *
+    ep 10/10  train 0.09106  val 0.23776
+   R2=+0.8237  unweighted=+0.8105  arm1=+0.7754  14s   | 27 this session in 6m, ETA 11m
+
+[28/80] frame3/nofilm/s1           ...
+  prep frame3: N=970 T=2000 S=3 channels=14 statics=33 | train 679 val 145 test 146 | 6790 train windows (10/sample) | 1.3s
+    ep  1/10  train 0.53413  val 0.96966  *
+    ep  2/10  train 0.45694  val 0.66796  *
+    ep  3/10  train 0.33459  val 0.57846  *
+    ep  4/10  train 0.64957  val 0.44479  *
+    ep  5/10  train 0.25719  val 0.37107  *
+    ep  6/10  train 0.20069  val 0.32051  *
+    ep  7/10  train 0.29915  val 0.30534  *
+    ep  8/10  train 0.16198  val 0.26383  *
+    ep  9/10  train 0.13700  val 0.25980  *
+    ep 10/10  train 0.14832  val 0.26451
+   R2=+0.7448  unweighted=+0.7264  arm1=+0.6810  14s   | 28 this session in 6m, ETA 11m
+
+[29/80] frame3/nofilm/s2           ...
+  prep frame3: N=970 T=2000 S=3 channels=14 statics=33 | train 679 val 145 test 146 | 6790 train windows (10/sample) | 1.0s
+    ep  1/10  train 1.75817  val 0.91186  *
+    ep  2/10  train 0.33314  val 0.68650  *
+    ep  3/10  train 0.38495  val 0.53976  *
+    ep  4/10  train 0.47063  val 0.46927  *
+    ep  5/10  train 0.23336  val 0.41540  *
+    ep  6/10  train 0.14707  val 0.36593  *
+    ep  7/10  train 0.21943  val 0.32039  *
+    ep  8/10  train 0.11890  val 0.31995  *
+    ep  9/10  train 0.10819  val 0.31336  *
+    ep 10/10  train 0.10386  val 0.31543
+   R2=+0.8201  unweighted=+0.7939  arm1=+0.7773  14s   | 29 this session in 6m, ETA 11m
+
+[30/80] frame3/nofilm/s3           ...
+  prep frame3: N=970 T=2000 S=3 channels=14 statics=33 | train 679 val 145 test 146 | 6790 train windows (10/sample) | 0.9s
+    ep  1/10  train 1.15834  val 1.10642  *
+    ep  2/10  train 0.83003  val 0.77173  *
+    ep  3/10  train 0.80819  val 0.78239
+    ep  4/10  train 0.35938  val 0.56037  *
+    ep  5/10  train 0.40367  val 0.54579  *
+    ep  6/10  train 0.23976  val 0.46067  *
+    ep  7/10  train 0.21278  val 0.43525  *
+    ep  8/10  train 0.14019  val 0.38923  *
+    ep  9/10  train 0.13357  val 0.39768
+    ep 10/10  train 0.14497  val 0.39644
+   R2=+0.7987  unweighted=+0.7871  arm1=+0.7364  14s   | 30 this session in 7m, ETA 11m
+
+[31/80] frame3/noskip/s42          ...
+  prep frame3: N=970 T=2000 S=3 channels=14 statics=33 | train 679 val 145 test 146 | 6790 train windows (10/sample) | 1.0s
+    ep  1/10  train 0.60851  val 0.96693  *
+    ep  2/10  train 0.26556  val 0.84314  *
+    ep  3/10  train 0.62855  val 0.53913  *
+    ep  4/10  train 0.18972  val 0.39998  *
+    ep  5/10  train 0.16461  val 0.41807
+    ep  6/10  train 0.11042  val 0.37651  *
+    ep  7/10  train 0.11965  val 0.30476  *
+    ep  8/10  train 0.21041  val 0.29409  *
+    ep  9/10  train 0.16036  val 0.28235  *
+    ep 10/10  train 0.11427  val 0.28006  *
+   R2=+0.8493  unweighted=+0.8361  arm1=+0.7880  14s   | 31 this session in 7m, ETA 11m
+
+[32/80] frame3/noskip/s0           ...
+  prep frame3: N=970 T=2000 S=3 channels=14 statics=33 | train 679 val 145 test 146 | 6790 train windows (10/sample) | 1.3s
+    ep  1/10  train 0.56404  val 0.67238  *
+    ep  2/10  train 0.42012  val 0.49550  *
+    ep  3/10  train 0.48462  val 0.43128  *
+    ep  4/10  train 0.69968  val 0.35781  *
+    ep  5/10  train 0.18468  val 0.30599  *
+    ep  6/10  train 0.31873  val 0.28342  *
+    ep  7/10  train 0.26611  val 0.25424  *
+    ep  8/10  train 0.18937  val 0.25798
+    ep  9/10  train 0.27009  val 0.25233  *
+    ep 10/10  train 0.07099  val 0.25334
+   R2=+0.8006  unweighted=+0.7836  arm1=+0.7754  14s   | 32 this session in 7m, ETA 11m
+
+[33/80] frame3/noskip/s1           ...
+  prep frame3: N=970 T=2000 S=3 channels=14 statics=33 | train 679 val 145 test 146 | 6790 train windows (10/sample) | 0.9s
+    ep  1/10  train 0.52553  val 0.95973  *
+    ep  2/10  train 0.38864  val 0.64851  *
+    ep  3/10  train 0.35409  val 0.50935  *
+    ep  4/10  train 0.91568  val 0.48996  *
+    ep  5/10  train 0.26671  val 0.36605  *
+    ep  6/10  train 0.19009  val 0.31113  *
+    ep  7/10  train 0.29096  val 0.31152
+    ep  8/10  train 0.11432  val 0.28875  *
+    ep  9/10  train 0.12137  val 0.28154  *
+    ep 10/10  train 0.15175  val 0.28092  *
+   R2=+0.7435  unweighted=+0.7226  arm1=+0.6810  14s   | 33 this session in 8m, ETA 11m
+
+[34/80] frame3/noskip/s2           ...
+  prep frame3: N=970 T=2000 S=3 channels=14 statics=33 | train 679 val 145 test 146 | 6790 train windows (10/sample) | 1.0s
+    ep  1/10  train 1.73121  val 0.90423  *
+    ep  2/10  train 0.36552  val 0.65631  *
+    ep  3/10  train 0.46499  val 0.58243  *
+    ep  4/10  train 0.59853  val 0.47458  *
+    ep  5/10  train 0.31251  val 0.46436  *
+    ep  6/10  train 0.16304  val 0.39032  *
+    ep  7/10  train 0.21390  val 0.33991  *
+    ep  8/10  train 0.15274  val 0.33429  *
+    ep  9/10  train 0.09886  val 0.32907  *
+    ep 10/10  train 0.10608  val 0.32927
+   R2=+0.8039  unweighted=+0.7784  arm1=+0.7773  14s   | 34 this session in 8m, ETA 11m
+
+[35/80] frame3/noskip/s3           ...
+  prep frame3: N=970 T=2000 S=3 channels=14 statics=33 | train 679 val 145 test 146 | 6790 train windows (10/sample) | 1.2s
+    ep  1/10  train 1.17366  val 1.09751  *
+    ep  2/10  train 0.79894  val 0.80267  *
+    ep  3/10  train 0.74560  val 0.66978  *
+    ep  4/10  train 0.34925  val 0.56434  *
+    ep  5/10  train 0.36182  val 0.51649  *
+    ep  6/10  train 0.18816  val 0.47601  *
+    ep  7/10  train 0.23381  val 0.47887
+    ep  8/10  train 0.16568  val 0.43144  *
+    ep  9/10  train 0.11945  val 0.43412
+    ep 10/10  train 0.15569  val 0.43043  *
+   R2=+0.7777  unweighted=+0.7642  arm1=+0.7364  14s   | 35 this session in 8m, ETA 11m
+
+[36/80] frame3/nozeroinit/s42      ...
+  prep frame3: N=970 T=2000 S=3 channels=14 statics=33 | train 679 val 145 test 146 | 6790 train windows (10/sample) | 1.0s
+    ep  1/10  train 0.60353  val 0.95946  *
+    ep  2/10  train 0.29477  val 0.75481  *
+    ep  3/10  train 0.69424  val 0.53061  *
+    ep  4/10  train 0.17647  val 0.38508  *
+    ep  5/10  train 0.17279  val 0.41461
+    ep  6/10  train 0.09556  val 0.36726  *
+    ep  7/10  train 0.12320  val 0.30971  *
+    ep  8/10  train 0.19750  val 0.29171  *
+    ep  9/10  train 0.14708  val 0.28506  *
+    ep 10/10  train 0.10078  val 0.28389  *
+   R2=+0.8697  unweighted=+0.8619  arm1=+0.7880  14s   | 36 this session in 9m, ETA 10m
+
+[37/80] frame3/nozeroinit/s0       ...
+  prep frame3: N=970 T=2000 S=3 channels=14 statics=33 | train 679 val 145 test 146 | 6790 train windows (10/sample) | 1.0s
+    ep  1/10  train 0.56546  val 0.66759  *
+    ep  2/10  train 0.61006  val 0.45247  *
+    ep  3/10  train 0.33050  val 0.37701  *
+    ep  4/10  train 0.50907  val 0.30825  *
+    ep  5/10  train 0.17283  val 0.29375  *
+    ep  6/10  train 0.24666  val 0.26887  *
+    ep  7/10  train 0.19102  val 0.24965  *
+    ep  8/10  train 0.14568  val 0.23504  *
+    ep  9/10  train 0.19872  val 0.22807  *
+    ep 10/10  train 0.05714  val 0.23076
+   R2=+0.8144  unweighted=+0.7992  arm1=+0.7754  14s   | 37 this session in 9m, ETA 10m
+
+[38/80] frame3/nozeroinit/s1       ...
+  prep frame3: N=970 T=2000 S=3 channels=14 statics=33 | train 679 val 145 test 146 | 6790 train windows (10/sample) | 1.0s
+    ep  1/10  train 0.52539  val 0.95080  *
+    ep  2/10  train 0.40793  val 0.66931  *
+    ep  3/10  train 0.26302  val 0.42255  *
+    ep  4/10  train 0.78558  val 0.39499  *
+    ep  5/10  train 0.28767  val 0.36189  *
+    ep  6/10  train 0.16084  val 0.30130  *
+    ep  7/10  train 0.25686  val 0.28055  *
+    ep  8/10  train 0.10911  val 0.25826  *
+    ep  9/10  train 0.09514  val 0.25754  *
+    ep 10/10  train 0.13367  val 0.25817
+   R2=+0.7311  unweighted=+0.7016  arm1=+0.6810  14s   | 38 this session in 9m, ETA 10m
+
+[39/80] frame3/nozeroinit/s2       ...
+  prep frame3: N=970 T=2000 S=3 channels=14 statics=33 | train 679 val 145 test 146 | 6790 train windows (10/sample) | 1.2s
+    ep  1/10  train 1.70776  val 0.89038  *
+    ep  2/10  train 0.22653  val 0.61550  *
+    ep  3/10  train 0.41959  val 0.51758  *
+    ep  4/10  train 0.47191  val 0.49658  *
+    ep  5/10  train 0.25567  val 0.46690  *
+    ep  6/10  train 0.12783  val 0.41464  *
+    ep  7/10  train 0.21463  val 0.34877  *
+    ep  8/10  train 0.14180  val 0.34306  *
+    ep  9/10  train 0.08663  val 0.34194  *
+    ep 10/10  train 0.09289  val 0.34335
+   R2=+0.7653  unweighted=+0.7372  arm1=+0.7773  14s   | 39 this session in 9m, ETA 10m
+
+[40/80] frame3/nozeroinit/s3       ...
+  prep frame3: N=970 T=2000 S=3 channels=14 statics=33 | train 679 val 145 test 146 | 6790 train windows (10/sample) | 0.9s
+    ep  1/10  train 1.16564  val 1.08686  *
+    ep  2/10  train 0.85639  val 0.79812  *
+    ep  3/10  train 1.17802  val 0.67045  *
+    ep  4/10  train 0.29146  val 0.56443  *
+    ep  5/10  train 0.35663  val 0.49742  *
+    ep  6/10  train 0.31290  val 0.43129  *
+    ep  7/10  train 0.17790  val 0.41870  *
+    ep  8/10  train 0.16796  val 0.37693  *
+    ep  9/10  train 0.09949  val 0.38294
+    ep 10/10  train 0.12474  val 0.38217
+   R2=+0.8160  unweighted=+0.8071  arm1=+0.7364  14s   | 40 this session in 10m, ETA 10m
+
+[41/80] tunnel/full/s42            ...
+  prep tunnel: N=1000 T=1001 S=11 channels=46 statics=12 | train 700 val 150 test 150 | 7000 train windows (10/sample) | 1.8s
+    ep  1/10  train 0.86695  val 0.75495  *
+    ep  2/10  train 0.20241  val 0.20103  *
+    ep  3/10  train 0.07304  val 0.11054  *
+    ep  4/10  train 0.10754  val 0.06233  *
+    ep  5/10  train 0.03878  val 0.04145  *
+    ep  6/10  train 0.03027  val 0.03134  *
+    ep  7/10  train 0.02976  val 0.02726  *
+    ep  8/10  train 0.01822  val 0.02457  *
+    ep  9/10  train 0.01832  val 0.02326  *
+    ep 10/10  train 0.01107  val 0.02292  *
+   R2=+0.9691  unweighted=+0.9125  arm1=+0.1388  15s   | 41 this session in 10m, ETA 10m
+
+[42/80] tunnel/full/s0             ...
+  prep tunnel: N=1000 T=1001 S=11 channels=46 statics=12 | train 700 val 150 test 150 | 7000 train windows (10/sample) | 2.3s
+    ep  1/10  train 0.56968  val 0.72625  *
+    ep  2/10  train 0.20925  val 0.20056  *
+    ep  3/10  train 0.13190  val 0.10338  *
+    ep  4/10  train 0.06271  val 0.05763  *
+    ep  5/10  train 0.09375  val 0.03958  *
+    ep  6/10  train 0.01799  val 0.03255  *
+    ep  7/10  train 0.01589  val 0.02576  *
+    ep  8/10  train 0.01652  val 0.02222  *
+    ep  9/10  train 0.01542  val 0.02152  *
+    ep 10/10  train 0.02149  val 0.02127  *
+   R2=+0.9791  unweighted=+0.9125  arm1=+0.1744  15s   | 42 this session in 10m, ETA 9m
+
+[43/80] tunnel/full/s1             ...
+  prep tunnel: N=1000 T=1001 S=11 channels=46 statics=12 | train 700 val 150 test 150 | 7000 train windows (10/sample) | 1.7s
+    ep  1/10  train 0.80245  val 0.77289  *
+    ep  2/10  train 0.23040  val 0.19791  *
+    ep  3/10  train 0.10743  val 0.11225  *
+    ep  4/10  train 0.03839  val 0.06734  *
+    ep  5/10  train 0.03144  val 0.04334  *
+    ep  6/10  train 0.03813  val 0.03481  *
+    ep  7/10  train 0.02945  val 0.03001  *
+    ep  8/10  train 0.01120  val 0.02630  *
+    ep  9/10  train 0.01583  val 0.02500  *
+    ep 10/10  train 0.02245  val 0.02487  *
+   R2=+0.9783  unweighted=+0.8976  arm1=+0.1664  15s   | 43 this session in 11m, ETA 9m
+
+[44/80] tunnel/full/s2             ...
+  prep tunnel: N=1000 T=1001 S=11 channels=46 statics=12 | train 700 val 150 test 150 | 7000 train windows (10/sample) | 1.8s
+    ep  1/10  train 0.48398  val 0.69713  *
+    ep  2/10  train 0.16540  val 0.23350  *
+    ep  3/10  train 0.07519  val 0.12348  *
+    ep  4/10  train 0.05782  val 0.06418  *
+    ep  5/10  train 0.03661  val 0.04910  *
+    ep  6/10  train 0.03481  val 0.03740  *
+    ep  7/10  train 0.01954  val 0.03226  *
+    ep  8/10  train 0.02055  val 0.02888  *
+    ep  9/10  train 0.01794  val 0.02770  *
+    ep 10/10  train 0.02222  val 0.02750  *
+   R2=+0.9819  unweighted=+0.9449  arm1=+0.1686  15s   | 44 this session in 11m, ETA 9m
+
+[45/80] tunnel/full/s3             ...
+  prep tunnel: N=1000 T=1001 S=11 channels=46 statics=12 | train 700 val 150 test 150 | 7000 train windows (10/sample) | 2.1s
+    ep  1/10  train 0.56817  val 0.91432  *
+    ep  2/10  train 0.26873  val 0.27718  *
+    ep  3/10  train 0.20116  val 0.18348  *
+    ep  4/10  train 0.07317  val 0.10712  *
+    ep  5/10  train 0.03648  val 0.07135  *
+    ep  6/10  train 0.03707  val 0.05339  *
+    ep  7/10  train 0.02685  val 0.04923  *
+    ep  8/10  train 0.02313  val 0.04571  *
+    ep  9/10  train 0.02249  val 0.04377  *
+    ep 10/10  train 0.01911  val 0.04344  *
+   R2=+0.9794  unweighted=+0.9259  arm1=+0.1439  15s   | 45 this session in 11m, ETA 9m
+
+[46/80] tunnel/nofilm/s42          ...
+  prep tunnel: N=1000 T=1001 S=11 channels=46 statics=12 | train 700 val 150 test 150 | 7000 train windows (10/sample) | 1.8s
+    ep  1/10  train 0.89827  val 0.78641  *
+    ep  2/10  train 0.19504  val 0.20148  *
+    ep  3/10  train 0.06945  val 0.10511  *
+    ep  4/10  train 0.09572  val 0.06317  *
+    ep  5/10  train 0.04324  val 0.04973  *
+    ep  6/10  train 0.03463  val 0.03663  *
+    ep  7/10  train 0.04141  val 0.03109  *
+    ep  8/10  train 0.02461  val 0.02822  *
+    ep  9/10  train 0.02617  val 0.02692  *
+    ep 10/10  train 0.01301  val 0.02673  *
+   R2=+0.9715  unweighted=+0.8877  arm1=+0.1388  14s   | 46 this session in 12m, ETA 9m
+
+[47/80] tunnel/nofilm/s0           ...
+  prep tunnel: N=1000 T=1001 S=11 channels=46 statics=12 | train 700 val 150 test 150 | 7000 train windows (10/sample) | 1.8s
+    ep  1/10  train 0.53764  val 0.77276  *
+    ep  2/10  train 0.21205  val 0.19456  *
+    ep  3/10  train 0.14463  val 0.11233  *
+    ep  4/10  train 0.07433  val 0.06715  *
+    ep  5/10  train 0.11130  val 0.05310  *
+    ep  6/10  train 0.02056  val 0.04029  *
+    ep  7/10  train 0.02090  val 0.03319  *
+    ep  8/10  train 0.01973  val 0.02846  *
+    ep  9/10  train 0.02276  val 0.02731  *
+    ep 10/10  train 0.02803  val 0.02675  *
+   R2=+0.9774  unweighted=+0.9134  arm1=+0.1744  15s   | 47 this session in 12m, ETA 8m
+
+[48/80] tunnel/nofilm/s1           ...
+  prep tunnel: N=1000 T=1001 S=11 channels=46 statics=12 | train 700 val 150 test 150 | 7000 train windows (10/sample) | 2.3s
+    ep  1/10  train 0.79432  val 0.76357  *
+    ep  2/10  train 0.27041  val 0.20892  *
+    ep  3/10  train 0.11242  val 0.11607  *
+    ep  4/10  train 0.03843  val 0.06931  *
+    ep  5/10  train 0.03011  val 0.04938  *
+    ep  6/10  train 0.05087  val 0.04225  *
+    ep  7/10  train 0.03425  val 0.03240  *
+    ep  8/10  train 0.01146  val 0.02893  *
+    ep  9/10  train 0.01860  val 0.02706  *
+    ep 10/10  train 0.02353  val 0.02679  *
+   R2=+0.9787  unweighted=+0.8944  arm1=+0.1664  15s   | 48 this session in 12m, ETA 8m
+
+[49/80] tunnel/nofilm/s2           ...
+  prep tunnel: N=1000 T=1001 S=11 channels=46 statics=12 | train 700 val 150 test 150 | 7000 train windows (10/sample) | 1.7s
+    ep  1/10  train 0.53055  val 0.73637  *
+    ep  2/10  train 0.17119  val 0.22571  *
+    ep  3/10  train 0.07320  val 0.12730  *
+    ep  4/10  train 0.06681  val 0.07047  *
+    ep  5/10  train 0.04508  val 0.04955  *
+    ep  6/10  train 0.04365  val 0.03962  *
+    ep  7/10  train 0.02098  val 0.03336  *
+    ep  8/10  train 0.02211  val 0.02962  *
+    ep  9/10  train 0.01927  val 0.02790  *
+    ep 10/10  train 0.02520  val 0.02784  *
+   R2=+0.9688  unweighted=+0.9171  arm1=+0.1686  14s   | 49 this session in 12m, ETA 8m
+
+[50/80] tunnel/nofilm/s3           ...
+  prep tunnel: N=1000 T=1001 S=11 channels=46 statics=12 | train 700 val 150 test 150 | 7000 train windows (10/sample) | 1.8s
+    ep  1/10  train 0.55775  val 0.87634  *
+    ep  2/10  train 0.24132  val 0.27227  *
+    ep  3/10  train 0.19830  val 0.16858  *
+    ep  4/10  train 0.05312  val 0.08731  *
+    ep  5/10  train 0.03724  val 0.07293  *
+    ep  6/10  train 0.03374  val 0.05697  *
+    ep  7/10  train 0.02381  val 0.05316  *
+    ep  8/10  train 0.02383  val 0.04589  *
+    ep  9/10  train 0.02097  val 0.04484  *
+    ep 10/10  train 0.01961  val 0.04479  *
+   R2=+0.9643  unweighted=+0.8537  arm1=+0.1439  14s   | 50 this session in 13m, ETA 8m
+
+[51/80] tunnel/noskip/s42          ...
+  prep tunnel: N=1000 T=1001 S=11 channels=46 statics=12 | train 700 val 150 test 150 | 7000 train windows (10/sample) | 2.0s
+    ep  1/10  train 0.92253  val 0.80839  *
+    ep  2/10  train 0.20938  val 0.20651  *
+    ep  3/10  train 0.05944  val 0.09858  *
+    ep  4/10  train 0.08859  val 0.05650  *
+    ep  5/10  train 0.03480  val 0.03733  *
+    ep  6/10  train 0.02814  val 0.03048  *
+    ep  7/10  train 0.02880  val 0.02528  *
+    ep  8/10  train 0.01652  val 0.02292  *
+    ep  9/10  train 0.01924  val 0.02208  *
+    ep 10/10  train 0.00998  val 0.02182  *
+   R2=+0.9733  unweighted=+0.9255  arm1=+0.1388  14s   | 51 this session in 13m, ETA 7m
+
+[52/80] tunnel/noskip/s0           ...
+  prep tunnel: N=1000 T=1001 S=11 channels=46 statics=12 | train 700 val 150 test 150 | 7000 train windows (10/sample) | 1.8s
+    ep  1/10  train 0.61132  val 0.78206  *
+    ep  2/10  train 0.23366  val 0.21027  *
+    ep  3/10  train 0.12462  val 0.09427  *
+    ep  4/10  train 0.05903  val 0.04862  *
+    ep  5/10  train 0.07281  val 0.03771  *
+    ep  6/10  train 0.01582  val 0.02820  *
+    ep  7/10  train 0.01543  val 0.02398  *
+    ep  8/10  train 0.01624  val 0.02153  *
+    ep  9/10  train 0.01571  val 0.02052  *
+    ep 10/10  train 0.02363  val 0.02036  *
+   R2=+0.9774  unweighted=+0.9013  arm1=+0.1744  14s   | 52 this session in 13m, ETA 7m
+
+[53/80] tunnel/noskip/s1           ...
+  prep tunnel: N=1000 T=1001 S=11 channels=46 statics=12 | train 700 val 150 test 150 | 7000 train windows (10/sample) | 1.8s
+    ep  1/10  train 0.82358  val 0.84210  *
+    ep  2/10  train 0.27684  val 0.20055  *
+    ep  3/10  train 0.08503  val 0.08265  *
+    ep  4/10  train 0.02448  val 0.05409  *
+    ep  5/10  train 0.01967  val 0.03695  *
+    ep  6/10  train 0.03280  val 0.03157  *
+    ep  7/10  train 0.02425  val 0.02651  *
+    ep  8/10  train 0.00862  val 0.02321  *
+    ep  9/10  train 0.01432  val 0.02203  *
+    ep 10/10  train 0.01819  val 0.02200  *
+   R2=+0.9796  unweighted=+0.9173  arm1=+0.1664  15s   | 53 this session in 14m, ETA 7m
+
+[54/80] tunnel/noskip/s2           ...
+  prep tunnel: N=1000 T=1001 S=11 channels=46 statics=12 | train 700 val 150 test 150 | 7000 train windows (10/sample) | 2.0s
+    ep  1/10  train 0.51860  val 0.74971  *
+    ep  2/10  train 0.17370  val 0.23632  *
+    ep  3/10  train 0.06615  val 0.10161  *
+    ep  4/10  train 0.04998  val 0.05651  *
+    ep  5/10  train 0.03357  val 0.04248  *
+    ep  6/10  train 0.03244  val 0.03297  *
+    ep  7/10  train 0.01656  val 0.02877  *
+    ep  8/10  train 0.01726  val 0.02506  *
+    ep  9/10  train 0.01584  val 0.02450  *
+    ep 10/10  train 0.01994  val 0.02438  *
+   R2=+0.9829  unweighted=+0.9443  arm1=+0.1686  15s   | 54 this session in 14m, ETA 7m
+
+[55/80] tunnel/noskip/s3           ...
+  prep tunnel: N=1000 T=1001 S=11 channels=46 statics=12 | train 700 val 150 test 150 | 7000 train windows (10/sample) | 1.8s
+    ep  1/10  train 0.62827  val 0.97294  *
+    ep  2/10  train 0.31006  val 0.28659  *
+    ep  3/10  train 0.18711  val 0.14071  *
+    ep  4/10  train 0.04624  val 0.08292  *
+    ep  5/10  train 0.02932  val 0.06629  *
+    ep  6/10  train 0.02934  val 0.04682  *
+    ep  7/10  train 0.02175  val 0.04231  *
+    ep  8/10  train 0.01798  val 0.03862  *
+    ep  9/10  train 0.01953  val 0.03793  *
+    ep 10/10  train 0.01583  val 0.03760  *
+   R2=+0.9817  unweighted=+0.9138  arm1=+0.1439  15s   | 55 this session in 14m, ETA 6m
+
+[56/80] tunnel/nozeroinit/s42      ...
+  prep tunnel: N=1000 T=1001 S=11 channels=46 statics=12 | train 700 val 150 test 150 | 7000 train windows (10/sample) | 1.7s
+    ep  1/10  train 0.73414  val 0.68349  *
+    ep  2/10  train 0.16049  val 0.14817  *
+    ep  3/10  train 0.04622  val 0.07211  *
+    ep  4/10  train 0.05635  val 0.04595  *
+    ep  5/10  train 0.02770  val 0.03158  *
+    ep  6/10  train 0.02386  val 0.02577  *
+    ep  7/10  train 0.01856  val 0.02154  *
+    ep  8/10  train 0.01421  val 0.01982  *
+    ep  9/10  train 0.01357  val 0.01871  *
+    ep 10/10  train 0.00816  val 0.01847  *
+   R2=+0.9708  unweighted=+0.9059  arm1=+0.1388  15s   | 56 this session in 15m, ETA 6m
+
+[57/80] tunnel/nozeroinit/s0       ...
+  prep tunnel: N=1000 T=1001 S=11 channels=46 statics=12 | train 700 val 150 test 150 | 7000 train windows (10/sample) | 1.7s
+    ep  1/10  train 0.53101  val 0.65188  *
+    ep  2/10  train 0.10592  val 0.12329  *
+    ep  3/10  train 0.05805  val 0.06439  *
+    ep  4/10  train 0.04638  val 0.03761  *
+    ep  5/10  train 0.06123  val 0.03131  *
+    ep  6/10  train 0.01266  val 0.02440  *
+    ep  7/10  train 0.01182  val 0.02065  *
+    ep  8/10  train 0.01241  val 0.01747  *
+    ep  9/10  train 0.01106  val 0.01678  *
+    ep 10/10  train 0.01428  val 0.01662  *
+   R2=+0.9841  unweighted=+0.9290  arm1=+0.1744  15s   | 57 this session in 15m, ETA 6m
+
+[58/80] tunnel/nozeroinit/s1       ...
+  prep tunnel: N=1000 T=1001 S=11 channels=46 statics=12 | train 700 val 150 test 150 | 7000 train windows (10/sample) | 2.0s
+    ep  1/10  train 0.75244  val 0.68442  *
+    ep  2/10  train 0.14201  val 0.11940  *
+    ep  3/10  train 0.06634  val 0.05423  *
+    ep  4/10  train 0.02289  val 0.04751  *
+    ep  5/10  train 0.01715  val 0.02873  *
+    ep  6/10  train 0.02723  val 0.02517  *
+    ep  7/10  train 0.01890  val 0.01984  *
+    ep  8/10  train 0.00775  val 0.01818  *
+    ep  9/10  train 0.01137  val 0.01717  *
+    ep 10/10  train 0.01381  val 0.01704  *
+   R2=+0.9815  unweighted=+0.9178  arm1=+0.1664  15s   | 58 this session in 15m, ETA 6m
+
+[59/80] tunnel/nozeroinit/s2       ...
+  prep tunnel: N=1000 T=1001 S=11 channels=46 statics=12 | train 700 val 150 test 150 | 7000 train windows (10/sample) | 1.7s
+    ep  1/10  train 0.44445  val 0.66386  *
+    ep  2/10  train 0.10484  val 0.12989  *
+    ep  3/10  train 0.04595  val 0.06836  *
+    ep  4/10  train 0.03241  val 0.04277  *
+    ep  5/10  train 0.02412  val 0.03536  *
+    ep  6/10  train 0.02691  val 0.02681  *
+    ep  7/10  train 0.01475  val 0.02301  *
+    ep  8/10  train 0.01176  val 0.02026  *
+    ep  9/10  train 0.01169  val 0.01918  *
+    ep 10/10  train 0.01396  val 0.01918
+   R2=+0.9837  unweighted=+0.9433  arm1=+0.1686  15s   | 59 this session in 15m, ETA 5m
+
+[60/80] tunnel/nozeroinit/s3       ...
+  prep tunnel: N=1000 T=1001 S=11 channels=46 statics=12 | train 700 val 150 test 150 | 7000 train windows (10/sample) | 1.7s
+    ep  1/10  train 0.52726  val 0.80406  *
+    ep  2/10  train 0.15014  val 0.18981  *
+    ep  3/10  train 0.11530  val 0.08793  *
+    ep  4/10  train 0.02737  val 0.06429  *
+    ep  5/10  train 0.02067  val 0.05556  *
+    ep  6/10  train 0.02126  val 0.03904  *
+    ep  7/10  train 0.01296  val 0.03528  *
+    ep  8/10  train 0.01196  val 0.03166  *
+    ep  9/10  train 0.01162  val 0.03119  *
+    ep 10/10  train 0.01087  val 0.03140
+   R2=+0.9846  unweighted=+0.9565  arm1=+0.1439  15s   | 60 this session in 16m, ETA 5m
+
+[61/80] turbine/full/s42           ...
+  prep turbine: N=1248 T=600 S=5 channels=22 statics=17 | train 873 val 187 test 188 | 5238 train windows (6/sample) | 0.8s
+    ep  1/10  train 1.00360  val 0.59270  *
+    ep  2/10  train 0.99350  val 0.45049  *
+    ep  3/10  train 0.89632  val 0.37863  *
+    ep  4/10  train 0.39214  val 0.34011  *
+    ep  5/10  train 0.23160  val 0.32193  *
+    ep  6/10  train 0.31919  val 0.27869  *
+    ep  7/10  train 0.16561  val 0.23131  *
+    ep  8/10  train 0.17772  val 0.16359  *
+    ep  9/10  train 0.12450  val 0.16253  *
+    ep 10/10  train 0.10922  val 0.15450  *
+   R2=+0.9369  unweighted=+0.7696  arm1=+0.7809  10s   | 61 this session in 16m, ETA 5m
+
+[62/80] turbine/full/s0            ...
+  prep turbine: N=1248 T=600 S=5 channels=22 statics=17 | train 873 val 187 test 188 | 5238 train windows (6/sample) | 0.9s
+    ep  1/10  train 0.84842  val 0.66419  *
+    ep  2/10  train 0.54832  val 0.45758  *
+    ep  3/10  train 0.42724  val 0.43297  *
+    ep  4/10  train 0.17052  val 0.43178  *
+    ep  5/10  train 0.31066  val 0.30140  *
+    ep  6/10  train 0.18714  val 0.23605  *
+    ep  7/10  train 0.14922  val 0.19997  *
+    ep  8/10  train 0.10193  val 0.17318  *
+    ep  9/10  train 0.15632  val 0.16127  *
+    ep 10/10  train 0.15871  val 0.15877  *
+   R2=+0.9189  unweighted=+0.7628  arm1=+0.7528  10s   | 62 this session in 16m, ETA 5m
+
+[63/80] turbine/full/s1            ...
+  prep turbine: N=1248 T=600 S=5 channels=22 statics=17 | train 873 val 187 test 188 | 5238 train windows (6/sample) | 0.8s
+    ep  1/10  train 0.58781  val 0.77490  *
+    ep  2/10  train 0.57796  val 0.57680  *
+    ep  3/10  train 0.62191  val 0.59794
+    ep  4/10  train 0.30141  val 0.47923  *
+    ep  5/10  train 0.19821  val 0.36152  *
+    ep  6/10  train 0.36267  val 0.29790  *
+    ep  7/10  train 0.20058  val 0.26300  *
+    ep  8/10  train 0.14145  val 0.23114  *
+    ep  9/10  train 0.13496  val 0.19609  *
+    ep 10/10  train 0.08019  val 0.17987  *
+   R2=+0.9408  unweighted=+0.8061  arm1=+0.7783  10s   | 63 this session in 16m, ETA 4m
+
+[64/80] turbine/full/s2            ...
+  prep turbine: N=1248 T=600 S=5 channels=22 statics=17 | train 873 val 187 test 188 | 5238 train windows (6/sample) | 0.7s
+    ep  1/10  train 0.56676  val 0.66520  *
+    ep  2/10  train 0.43377  val 0.47875  *
+    ep  3/10  train 0.32287  val 0.49211
+    ep  4/10  train 0.30214  val 0.31497  *
+    ep  5/10  train 0.24116  val 0.31334  *
+    ep  6/10  train 0.19129  val 0.21766  *
+    ep  7/10  train 0.13007  val 0.19318  *
+    ep  8/10  train 0.13232  val 0.14892  *
+    ep  9/10  train 0.06268  val 0.13842  *
+    ep 10/10  train 0.08080  val 0.13186  *
+   R2=+0.9451  unweighted=+0.8261  arm1=+0.7677  10s   | 64 this session in 17m, ETA 4m
+
+[65/80] turbine/full/s3            ...
+  prep turbine: N=1248 T=600 S=5 channels=22 statics=17 | train 873 val 187 test 188 | 5238 train windows (6/sample) | 0.6s
+    ep  1/10  train 0.51800  val 0.73360  *
+    ep  2/10  train 0.53668  val 0.62525  *
+    ep  3/10  train 0.49456  val 0.56116  *
+    ep  4/10  train 0.37204  val 0.45958  *
+    ep  5/10  train 0.49502  val 0.41915  *
+    ep  6/10  train 0.17893  val 0.26819  *
+    ep  7/10  train 0.16291  val 0.23198  *
+    ep  8/10  train 0.16321  val 0.20211  *
+    ep  9/10  train 0.13973  val 0.18278  *
+    ep 10/10  train 0.08365  val 0.17780  *
+   R2=+0.9482  unweighted=+0.8275  arm1=+0.7851  10s   | 65 this session in 17m, ETA 4m
+
+[66/80] turbine/nofilm/s42         ...
+  prep turbine: N=1248 T=600 S=5 channels=22 statics=17 | train 873 val 187 test 188 | 5238 train windows (6/sample) | 0.6s
+    ep  1/10  train 1.01318  val 0.59075  *
+    ep  2/10  train 0.92497  val 0.44601  *
+    ep  3/10  train 0.87249  val 0.37086  *
+    ep  4/10  train 0.31319  val 0.25540  *
+    ep  5/10  train 0.19965  val 0.21240  *
+    ep  6/10  train 0.28552  val 0.20143  *
+    ep  7/10  train 0.12377  val 0.14055  *
+    ep  8/10  train 0.10844  val 0.10862  *
+    ep  9/10  train 0.11490  val 0.10053  *
+    ep 10/10  train 0.07541  val 0.09761  *
+   R2=+0.9426  unweighted=+0.7894  arm1=+0.7809  10s   | 66 this session in 17m, ETA 4m
+
+[67/80] turbine/nofilm/s0          ...
+  prep turbine: N=1248 T=600 S=5 channels=22 statics=17 | train 873 val 187 test 188 | 5238 train windows (6/sample) | 0.7s
+    ep  1/10  train 0.82885  val 0.66100  *
+    ep  2/10  train 0.71625  val 0.51804  *
+    ep  3/10  train 0.42755  val 0.41413  *
+    ep  4/10  train 0.21706  val 0.32831  *
+    ep  5/10  train 0.24895  val 0.26561  *
+    ep  6/10  train 0.14280  val 0.18828  *
+    ep  7/10  train 0.10318  val 0.15804  *
+    ep  8/10  train 0.08403  val 0.12814  *
+    ep  9/10  train 0.11174  val 0.11663  *
+    ep 10/10  train 0.14400  val 0.11421  *
+   R2=+0.9480  unweighted=+0.8485  arm1=+0.7528  10s   | 67 this session in 17m, ETA 3m
+
+[68/80] turbine/nofilm/s1          ...
+  prep turbine: N=1248 T=600 S=5 channels=22 statics=17 | train 873 val 187 test 188 | 5238 train windows (6/sample) | 0.7s
+    ep  1/10  train 0.58675  val 0.76837  *
+    ep  2/10  train 0.60111  val 0.60291  *
+    ep  3/10  train 0.67088  val 0.56989  *
+    ep  4/10  train 0.30000  val 0.46622  *
+    ep  5/10  train 0.18577  val 0.35583  *
+    ep  6/10  train 0.20162  val 0.26543  *
+    ep  7/10  train 0.15591  val 0.19875  *
+    ep  8/10  train 0.12808  val 0.18912  *
+    ep  9/10  train 0.17296  val 0.17830  *
+    ep 10/10  train 0.07166  val 0.15991  *
+   R2=+0.9448  unweighted=+0.8191  arm1=+0.7783  10s   | 68 this session in 17m, ETA 3m
+
+[69/80] turbine/nofilm/s2          ...
+  prep turbine: N=1248 T=600 S=5 channels=22 statics=17 | train 873 val 187 test 188 | 5238 train windows (6/sample) | 0.6s
+    ep  1/10  train 0.58191  val 0.69954  *
+    ep  2/10  train 0.50802  val 0.63568  *
+    ep  3/10  train 0.27396  val 0.45050  *
+    ep  4/10  train 0.34505  val 0.38607  *
+    ep  5/10  train 0.29321  val 0.32732  *
+    ep  6/10  train 0.24307  val 0.24118  *
+    ep  7/10  train 0.14273  val 0.20566  *
+    ep  8/10  train 0.15635  val 0.17779  *
+    ep  9/10  train 0.08149  val 0.15550  *
+    ep 10/10  train 0.09635  val 0.15171  *
+   R2=+0.9481  unweighted=+0.8349  arm1=+0.7677  10s   | 69 this session in 18m, ETA 3m
+
+[70/80] turbine/nofilm/s3          ...
+  prep turbine: N=1248 T=600 S=5 channels=22 statics=17 | train 873 val 187 test 188 | 5238 train windows (6/sample) | 0.9s
+    ep  1/10  train 0.56159  val 0.77333  *
+    ep  2/10  train 0.49933  val 0.62330  *
+    ep  3/10  train 0.49047  val 0.58127  *
+    ep  4/10  train 0.43190  val 0.38956  *
+    ep  5/10  train 0.52488  val 0.44698
+    ep  6/10  train 0.16719  val 0.22624  *
+    ep  7/10  train 0.12978  val 0.20362  *
+    ep  8/10  train 0.14081  val 0.16312  *
+    ep  9/10  train 0.10794  val 0.15483  *
+    ep 10/10  train 0.07503  val 0.15004  *
+   R2=+0.9506  unweighted=+0.8350  arm1=+0.7851  10s   | 70 this session in 18m, ETA 3m
+
+[71/80] turbine/noskip/s42         ...
+  prep turbine: N=1248 T=600 S=5 channels=22 statics=17 | train 873 val 187 test 188 | 5238 train windows (6/sample) | 0.9s
+    ep  1/10  train 1.01784  val 0.60656  *
+    ep  2/10  train 0.94114  val 0.44244  *
+    ep  3/10  train 0.97957  val 0.47125
+    ep  4/10  train 0.39944  val 0.34706  *
+    ep  5/10  train 0.28061  val 0.34632  *
+    ep  6/10  train 0.29459  val 0.26184  *
+    ep  7/10  train 0.14837  val 0.20731  *
+    ep  8/10  train 0.17521  val 0.16879  *
+    ep  9/10  train 0.11897  val 0.17063
+    ep 10/10  train 0.10248  val 0.16138  *
+   R2=+0.9353  unweighted=+0.7642  arm1=+0.7809  10s   | 71 this session in 18m, ETA 2m
+
+[72/80] turbine/noskip/s0          ...
+  prep turbine: N=1248 T=600 S=5 channels=22 statics=17 | train 873 val 187 test 188 | 5238 train windows (6/sample) | 0.9s
+    ep  1/10  train 0.85195  val 0.65992  *
+    ep  2/10  train 0.56261  val 0.49672  *
+    ep  3/10  train 0.47627  val 0.45737  *
+    ep  4/10  train 0.24739  val 0.41207  *
+    ep  5/10  train 0.30370  val 0.32298  *
+    ep  6/10  train 0.18718  val 0.24046  *
+    ep  7/10  train 0.12433  val 0.19205  *
+    ep  8/10  train 0.09452  val 0.15837  *
+    ep  9/10  train 0.14137  val 0.14940  *
+    ep 10/10  train 0.14841  val 0.14859  *
+   R2=+0.9294  unweighted=+0.7938  arm1=+0.7528  10s   | 72 this session in 18m, ETA 2m
+
+[73/80] turbine/noskip/s1          ...
+  prep turbine: N=1248 T=600 S=5 channels=22 statics=17 | train 873 val 187 test 188 | 5238 train windows (6/sample) | 0.7s
+    ep  1/10  train 0.60398  val 0.78155  *
+    ep  2/10  train 0.58376  val 0.59494  *
+    ep  3/10  train 0.62505  val 0.54801  *
+    ep  4/10  train 0.36637  val 0.48878  *
+    ep  5/10  train 0.17346  val 0.35051  *
+    ep  6/10  train 0.19185  val 0.21306  *
+    ep  7/10  train 0.17947  val 0.21290  *
+    ep  8/10  train 0.12255  val 0.19468  *
+    ep  9/10  train 0.15196  val 0.17785  *
+    ep 10/10  train 0.07545  val 0.15842  *
+   R2=+0.9479  unweighted=+0.8290  arm1=+0.7783  10s   | 73 this session in 18m, ETA 2m
+
+[74/80] turbine/noskip/s2          ...
+  prep turbine: N=1248 T=600 S=5 channels=22 statics=17 | train 873 val 187 test 188 | 5238 train windows (6/sample) | 0.7s
+    ep  1/10  train 0.59384  val 0.70042  *
+    ep  2/10  train 0.50514  val 0.51940  *
+    ep  3/10  train 0.24389  val 0.60892
+    ep  4/10  train 0.34357  val 0.38282  *
+    ep  5/10  train 0.18659  val 0.26806  *
+    ep  6/10  train 0.19064  val 0.21963  *
+    ep  7/10  train 0.11133  val 0.16962  *
+    ep  8/10  train 0.11885  val 0.16592  *
+    ep  9/10  train 0.06176  val 0.14460  *
+    ep 10/10  train 0.09068  val 0.13677  *
+   R2=+0.9474  unweighted=+0.8331  arm1=+0.7677  10s   | 74 this session in 19m, ETA 2m
+
+[75/80] turbine/noskip/s3          ...
+  prep turbine: N=1248 T=600 S=5 channels=22 statics=17 | train 873 val 187 test 188 | 5238 train windows (6/sample) | 0.7s
+    ep  1/10  train 0.53047  val 0.74654  *
+    ep  2/10  train 0.52303  val 0.62336  *
+    ep  3/10  train 0.56103  val 0.59184  *
+    ep  4/10  train 0.47014  val 0.54681  *
+    ep  5/10  train 0.41979  val 0.47754  *
+    ep  6/10  train 0.19190  val 0.34260  *
+    ep  7/10  train 0.18579  val 0.25989  *
+    ep  8/10  train 0.16200  val 0.22293  *
+    ep  9/10  train 0.15828  val 0.20538  *
+    ep 10/10  train 0.09939  val 0.19984  *
+   R2=+0.9398  unweighted=+0.7988  arm1=+0.7851  10s   | 75 this session in 19m, ETA 1m
+
+[76/80] turbine/nozeroinit/s42     ...
+  prep turbine: N=1248 T=600 S=5 channels=22 statics=17 | train 873 val 187 test 188 | 5238 train windows (6/sample) | 0.7s
+    ep  1/10  train 0.99854  val 0.57570  *
+    ep  2/10  train 0.93700  val 0.43549  *
+    ep  3/10  train 0.86301  val 0.42461  *
+    ep  4/10  train 0.33667  val 0.32825  *
+    ep  5/10  train 0.17843  val 0.27104  *
+    ep  6/10  train 0.24408  val 0.19504  *
+    ep  7/10  train 0.13949  val 0.16752  *
+    ep  8/10  train 0.10427  val 0.12269  *
+    ep  9/10  train 0.07449  val 0.11175  *
+    ep 10/10  train 0.08761  val 0.10960  *
+   R2=+0.9465  unweighted=+0.8044  arm1=+0.7809  10s   | 76 this session in 19m, ETA 1m
+
+[77/80] turbine/nozeroinit/s0      ...
+  prep turbine: N=1248 T=600 S=5 channels=22 statics=17 | train 873 val 187 test 188 | 5238 train windows (6/sample) | 0.7s
+    ep  1/10  train 0.84506  val 0.63478  *
+    ep  2/10  train 0.57367  val 0.48081  *
+    ep  3/10  train 0.34034  val 0.38915  *
+    ep  4/10  train 0.21201  val 0.35813  *
+    ep  5/10  train 0.28564  val 0.28868  *
+    ep  6/10  train 0.16215  val 0.22159  *
+    ep  7/10  train 0.10104  val 0.18498  *
+    ep  8/10  train 0.08752  val 0.16217  *
+    ep  9/10  train 0.13097  val 0.15090  *
+    ep 10/10  train 0.18680  val 0.15072  *
+   R2=+0.9295  unweighted=+0.7944  arm1=+0.7528  10s   | 77 this session in 19m, ETA 1m
+
+[78/80] turbine/nozeroinit/s1      ...
+  prep turbine: N=1248 T=600 S=5 channels=22 statics=17 | train 873 val 187 test 188 | 5238 train windows (6/sample) | 0.6s
+    ep  1/10  train 0.55271  val 0.74544  *
+    ep  2/10  train 0.60056  val 0.56992  *
+    ep  3/10  train 0.60022  val 0.50040  *
+    ep  4/10  train 0.28177  val 0.44073  *
+    ep  5/10  train 0.16739  val 0.37568  *
+    ep  6/10  train 0.22190  val 0.24237  *
+    ep  7/10  train 0.16656  val 0.20468  *
+    ep  8/10  train 0.12363  val 0.19117  *
+    ep  9/10  train 0.13821  val 0.16846  *
+    ep 10/10  train 0.05762  val 0.15554  *
+   R2=+0.9471  unweighted=+0.8262  arm1=+0.7783  10s   | 78 this session in 19m, ETA 0m
+
+[79/80] turbine/nozeroinit/s2      ...
+  prep turbine: N=1248 T=600 S=5 channels=22 statics=17 | train 873 val 187 test 188 | 5238 train windows (6/sample) | 0.8s
+    ep  1/10  train 0.53988  val 0.63849  *
+    ep  2/10  train 0.42929  val 0.61082  *
+    ep  3/10  train 0.25716  val 0.49868  *
+    ep  4/10  train 0.25501  val 0.48761  *
+    ep  5/10  train 0.24206  val 0.29486  *
+    ep  6/10  train 0.23330  val 0.26640  *
+    ep  7/10  train 0.12011  val 0.18372  *
+    ep  8/10  train 0.13671  val 0.16740  *
+    ep  9/10  train 0.08053  val 0.15344  *
+    ep 10/10  train 0.07900  val 0.14376  *
+   R2=+0.9406  unweighted=+0.8101  arm1=+0.7677  10s   | 79 this session in 20m, ETA 0m
+
+[80/80] turbine/nozeroinit/s3      ...
+  prep turbine: N=1248 T=600 S=5 channels=22 statics=17 | train 873 val 187 test 188 | 5238 train windows (6/sample) | 0.9s
+    ep  1/10  train 0.48009  val 0.72611  *
+    ep  2/10  train 0.52842  val 0.67148  *
+    ep  3/10  train 0.43008  val 0.50063  *
+    ep  4/10  train 0.51694  val 0.46674  *
+    ep  5/10  train 0.40097  val 0.43859  *
+    ep  6/10  train 0.16743  val 0.26533  *
+    ep  7/10  train 0.13267  val 0.21603  *
+    ep  8/10  train 0.16458  val 0.19532  *
+    ep  9/10  train 0.10970  val 0.15865  *
+    ep 10/10  train 0.07933  val 0.15375  *
+   R2=+0.9511  unweighted=+0.8364  arm1=+0.7851  10s   | 80 this session in 20m, ETA 0m
+
+80/80 complete. 20 min this session.

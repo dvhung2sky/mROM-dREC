@@ -75,8 +75,9 @@ XI_LO,     XI_HI      = 0.01, 0.03
 # the per-spring yield force is F_y = q_cap · D · ΔZ, giving:
 #   sand : F_y ≈ 19 – 93 kN  ⇒ even metro (70 kN/axle) can yield in soft-sand
 #   clay : F_y ≈  6 – 31 kN  ⇒ clear yield for all train classes in the clay zone
-QCAPS_LO,  QCAPS_HI   =   3.0e3,  15.0e3      # sand bearing capacity [Pa]
-QCAPC_LO,  QCAPC_HI   =   1.0e3,   5.0e3      # clay bearing capacity [Pa]
+_QS = float(__import__("os").environ.get("QSCALE", 1.0))   # Table 6 knob; 1.0 = published database
+QCAPS_LO,  QCAPS_HI   =   3.0e3*_QS,  15.0e3*_QS   # sand bearing capacity [Pa]
+QCAPC_LO,  QCAPC_HI   =   1.0e3*_QS,   5.0e3*_QS   # clay bearing capacity [Pa]
 VKMH_LO,   VKMH_HI    = 60.0, 140.0
 
 PARAM_NAMES = ['E', 'zeta', 't_wall', 'rho', 'k_sand', 'k_clay',
